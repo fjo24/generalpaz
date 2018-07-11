@@ -47,12 +47,9 @@
             </div>
         </div>
         <div class="col l12 s12 no-padding">
-            <button class="btn-large waves-effect waves-light pink right" name="action" type="submit">
-                Crear
-                <i class="material-icons right">
-                    send
-                </i>
-            </button>
+            <button class="boton btn-large right" name="action" type="submit">
+Crear
+                    </button>
         </div>
         {!!Form::close()!!}
     </div>

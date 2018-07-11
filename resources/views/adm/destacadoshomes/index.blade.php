@@ -42,7 +42,7 @@
             <tbody>
                 @foreach($destacados as $destacado)
                 <tr>
-                    <td class="hide-on-med-and-down"><img src="{{ asset($destacado->imagen) }}" alt="seccion" width="400" height="150"/>
+                    <td class="imagen_listado"><img src="{{ asset($destacado->imagen) }}"/>
                     </td>
                     <td>
                         {!!$destacado->nombre!!}

@@ -86,11 +86,8 @@
             </textarea>
         </div>
         <div class="col l12 s12 no-padding">
-            <button class="btn-large waves-effect waves-light red right" name="action" type="submit">
+            <button class="boton btn-large right" name="action" type="submit">
                 Crear
-                <i class="material-icons right">
-                    send
-                </i>
             </button>
         </div>
         {!!Form::close()!!}

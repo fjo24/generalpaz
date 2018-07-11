@@ -8,7 +8,7 @@ class Obra extends Model
 {
     protected $table    = "obras";
     protected $fillable = [
-        'titulo', 'subtitulo', 'tareas', 'categoria_obra_id', 'orden',
+        'nombre', 'descripcion', 'categoria_obra_id', 'orden',
     ];
 
     public function categoria_obra()

@@ -15,10 +15,9 @@ class AddObrasTable extends Migration
     {
         Schema::create('obras', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titulo');
-            $table->string('subtitulo');
-            $table->text('tareas');
-            $table->string('orden');
+            $table->string('nombre', 100);
+            $table->text('descripcion');
+            $table->string('orden', 10);
             $table->integer('categoria_obra_id')->unsigned();
 
             $table->foreign('categoria_obra_id')->references('id')->on('categoria_obras')->onDelete('cascade');

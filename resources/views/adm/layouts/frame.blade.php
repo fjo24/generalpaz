@@ -90,7 +90,7 @@
             <ul class="sidenav sidenav-fixed" id="slide-out">
                 <div class="logo">
                     <a class="brand-logo" href="" id="logo-container">
-                        <img alt="" class="responsive-img" src="{{ asset('img/logo_principal.jpg') }}">
+                        <img alt="" class="responsive-img" src="{{ asset('img/logo_principal.png') }}">
                         </img>
                     </a>
                 </div>
@@ -142,31 +142,9 @@
                     <li class="bold">
                         <a class="collapsible-header waves-effect waves-admin">
                             <i class="material-icons">
-                                email
-                            </i>
-                            Newsletter
-                        </a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li>
-                                    <a href="{{route('newsletters.index')}}">
-                                        Listado
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{route('newsletters.create')}}">
-                                        Registrar email
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="bold">
-                        <a class="collapsible-header waves-effect waves-admin">
-                            <i class="material-icons">
                                 group
                             </i>
-                            Quienes somos
+                            Empresas
                         </a>
                         <div class="collapsible-body">
                             <ul>
@@ -178,6 +156,24 @@
                             </ul>
                         </div>
                     </li>
+                    <li class="bold">
+                        <a class="collapsible-header waves-effect waves-admin">
+                            <i class="material-icons">
+                                home
+                            </i>
+                            Certificación
+                        </a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li>
+                                    <a href="{{route('certificaciones.create')}}">
+                                        Editar Certificación
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!--  
                     <li class="bold">
                         <a class="collapsible-header waves-effect waves-admin">
                             <i class="material-icons">
@@ -209,24 +205,73 @@
                                 </li>
                             </ul>
                         </div>
-                    </li>
+                    </li>-->
                     <li class="bold">
                         <a class="collapsible-header waves-effect waves-admin">
                             <i class="material-icons">
-                                lightbulb_outline
+                                work
                             </i>
-                            Novedades
+                            Obras
                         </a>
                         <div class="collapsible-body">
                             <ul>
                                 <li>
-                                    <a href="{{route('novedades.create')}}">
-                                        Crear Novedad
+                                    <a href="{{route('cat-obras.create')}}">
+                                        Crear categoria obra
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{route('novedades.index')}}">
-                                        Ver/Editar Novedades
+                                    <a href="{{route('cat-obras.index')}}">
+                                        Editar categoria obra
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{route('obras.create')}}">
+                                        Crear obra
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{route('obras.index')}}">
+                                        Editar obra
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="bold">
+                        <a class="collapsible-header waves-effect waves-admin">
+                            <i class="material-icons">
+                                build
+                            </i>
+                            Servicios
+                        </a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li>
+                                    <a href="{{route('servicios.index')}}">
+                                        Editar servicio
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="bold">
+                        <a class="collapsible-header waves-effect waves-admin">
+                            <i class="material-icons">
+                                thumb_up
+                            </i>
+                            Clientes
+                        </a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li>
+                                    <a href="{{route('clientes.create')}}">
+                                        Crear cliente
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{route('clientes.index')}}">
+                                        Editar cliente
                                     </a>
                                 </li>
                             </ul>
@@ -252,23 +297,6 @@
                     <li class="bold">
                         <a class="collapsible-header waves-effect waves-admin">
                             <i class="material-icons">
-                                local_phone
-                            </i>
-                            Contacto
-                        </a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li>
-                                    <a href="{{route('contacto.create')}}">
-                                        Editar Contenido
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="bold">
-                        <a class="collapsible-header waves-effect waves-admin">
-                            <i class="material-icons">
                                 grid_on
                             </i>
                             Redes Sociales
@@ -286,49 +314,20 @@
                     <li class="bold">
                         <a class="collapsible-header waves-effect waves-admin">
                             <i class="material-icons">
-                                library_books
+                                pin_drop
                             </i>
-                            Catalogos
+                            Metadatos
                         </a>
                         <div class="collapsible-body">
                             <ul>
                                 <li>
-                                    <a href="{{route('catalogos.create')}}">
-                                        Agregar Catalogo
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{route('catalogos.index')}}">
-                                        Editar Catalogo
+                                    <a href="{{route('metadatos.index')}}">
+                                        Editar Metadatos
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </li>
-                    <li class="bold">
-                        <a class="collapsible-header waves-effect waves-admin">
-                            <i class="material-icons">
-                                assignment_ind
-                            </i>
-                            Distribuidores
-                        </a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li>
-                                    <a href="{{route('distribuidores.create')}}">
-                                        Crear Distribuidores
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{route('distribuidores.index')}}">
-                                        Editar Distribuidores
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    @if(Auth::user())
-                  @if(Auth::user()->nivel === 'administrador')
                     <li class="bold">
                         <a class="collapsible-header waves-effect waves-admin">
                             <i class="material-icons">
@@ -351,8 +350,6 @@
                             </ul>
                         </div>
                     </li>
-                    @endif
-              @endif
                     <!--    @if(Auth::user())
                 @if(Auth::user()->nivel === 'administrador')
               <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">account_circle</i>Usuarios</a>

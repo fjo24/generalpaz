@@ -3,7 +3,7 @@
 @section('titulo', 'Categoria de productos')
 
 @section('contenido')
-		@if(count($errors) > 0)
+        @if(count($errors) > 0)
 <div class="col s12 card-panel red lighten-4 red-text text-darken-4">
     <ul>
         @foreach($errors->all() as $error)
@@ -14,7 +14,7 @@
     </ul>
 </div>
 @endif
-		@if(session('success'))
+        @if(session('success'))
 <div class="col s12 card-panel green lighten-4 green-text text-darken-4">
     {{ session('success') }}
 </div>
@@ -47,11 +47,8 @@
             </div>
         </div>
         <div class="col l12 s12 no-padding">
-            <button class="btn-large waves-effect pink waves-light right" name="action" type="submit">
+            <button class="boton btn-large right" name="action" type="submit">
                 Editar
-                <i class="material-icons right">
-                    send
-                </i>
             </button>
         </div>
         {!!Form::close()!!}
@@ -60,9 +57,8 @@
 @endsection
 @section('js')
 <script type="text/javascript">
-$(document).ready(function(){
+    $(document).ready(function(){
     $('select').formSelect();
   });
-
 </script>
 @endsection
