@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class AddRedesTable extends Migration
+class AddCategoriaObrasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,21 +13,22 @@ class AddRedesTable extends Migration
      */
     public function up()
     {
-        Schema::create('redes', function (Blueprint $table) {
+        Schema::create('categoria_obras', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
-            $table->string('link');
+            $table->string('orden');
+            $table->string('imagen');
             $table->timestamps();
         });
     }
 
-    /**
+    /**'nombre', 'orden', 'imagen',
      * Reverse the migrations.
      *
      * @return void
      */
     public function down()
     {
-        Schema::dropIfExists('redes');
+        Schema::dropIfExists('categoria_obras');
     }
 }
