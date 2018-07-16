@@ -31,9 +31,6 @@
                 {!!Form::label('orden:')!!}
                         {!!Form::text('orden', null , ['class'=>'', 'required'])!!}
             </div>
-            <div class="input-field col l6 s12">
-                {!! Form::select('id_superior', $categorias, null, ['class' => 'form-control', 'placeholder' => 'Categoria']) !!}
-            </div>
             <div class="file-field input-field col l6 s12">
                 <div class="btn">
                     <span>

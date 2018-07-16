@@ -16,9 +16,10 @@ class AddTipovidrioTable extends Migration
         Schema::create('tipovidrio', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
-            $table->string('descripcion');
+            $table->text('descripcion');
             $table->string('orden');
-            $table->string('contenido');
+            $table->string('imagen');
+            $table->text('contenido');
             $table->timestamps();
         });
     }

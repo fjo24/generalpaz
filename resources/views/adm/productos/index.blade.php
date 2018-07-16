@@ -29,9 +29,6 @@
                 <th>
                     Categoria
                 </th>
-                <th>
-                	Codigo
-                </th>
                 <th class="center">
                     Administrar imagenes
                 </th>
@@ -48,9 +45,6 @@
                     <td>
                         {!!$producto->categoria->nombre!!}
                     </td>
-                    <td>
-                    	{!!$producto->codigo!!}
-                     </td>
                     <td class="center"><a href="{{ route('imgproducto.lista',$producto->id)}}"><i class="material-icons">image</i></a></td>
                     <td class="text-right">
                         <a href="{{ route('productos.edit',$producto->id)}}">

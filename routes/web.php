@@ -87,6 +87,13 @@ Route::prefix('adm')->group(function () {
     Route::resource('productos', 'Adm\ProductosController');
     /*------------Imagen----------------*/
     Route::get('producto/{producto_id}/imagenes/', 'Adm\ProductosController@imagenes')->name('imgproducto.lista'); //index del modulo imagenes
+    /*------------MODELOS----------------*/
+    Route::resource('modelos', 'adm\ModelosController');
+    /*------------TIPOS DE VIDRIO----------------*/
+    Route::resource('tiposvidrio', 'adm\TiposvidrioController');
+    /*------------VENTAJAS----------------*/
+    Route::resource('ventajas', 'adm\VentajasController');
+
     //agregar nuevas imagenes de productos
     Route::post('producto/nuevaimagen/{id}', 'Adm\ProductosController@nuevaimagen')->name('imgproducto.nueva'); //es el store de las imagenes
     Route::delete('imgproducto/{id}/destroy', [

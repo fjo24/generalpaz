@@ -28,66 +28,36 @@
                         {!!Form::text('nombre', null , ['class'=>'', ''])!!}
             </div>
             <div class="input-field col l6 s12">
-                {!!Form::label('Codigo:')!!}
-                        {!!Form::text('codigo', null , ['class'=>'', ''])!!}
-            </div>
-            <div class="input-field col l6 s12">
-                {!!Form::label('Medidas:')!!}
-                        {!!Form::text('medidas', null , ['class'=>'', ''])!!}
-            </div>
-            <div class="input-field col l6 s12">
-                {!!Form::label('Numero por embalaje:')!!}
-                        {!!Form::text('embalaje', null , ['class'=>'', ''])!!}
-            </div>
-            <div class="input-field col l6 s12">
                 {!! Form::select('categoria_id', $categorias, null, ['class' => 'form-control', 'placeholder' => 'Categoria']) !!}
-            </div>
-            <div class="input-field col l6 s12">
-                {!!Form::label('Precio:')!!}
-                        {!!Form::text('precio', null , ['class'=>'', ''])!!}
-            </div>
-            <div class="input-field col l6 s12">
-                {!! Form::select('visible', ['publico' => 'publico', 'privado' => 'privado', 'ambos' => 'ambos'], null, ['class' => 'form-control', 'placeholder' => 'Seleccione visibilidad']) !!}
             </div>
             <div class="input-field col l6 s12">
                 {!!Form::label('Orden:')!!}
                         {!!Form::text('orden', null , ['class'=>'', ''])!!}
             </div>
             <div class="input-field col l6 s12">
-                {!! Form::select('tipo', ['novedad' => 'novedad', 'oferta' => 'oferta', 'ninguna' => 'ninguna'], null, ['class' => 'form-control', 'placeholder' => 'Seleccione tipo de producto']) !!}
+                {!! Form::label('Modelos') !!}<br />
+                {!! Form::select('modelos[]', $modelos, null, ['class' => 'form-control', 'multiple' => 'multiple']) !!}
             </div>
-        </div>
-        <label class="col l12 s12" for="descripcion">
-            Descripcion
-        </label>
-        <div class="input-field col l12 s12">
-            <textarea class="materialize-textarea" id="descripcion" name="descripcion" required="">
-            {!!$producto->descripcion!!}
-            </textarea>
-        </div>
-        <label class="col l12 s12" for="contenido">
-            Contenido
-        </label>
-        <div class="input-field col l12 s12">
-            <textarea class="materialize-textarea" id="contenido" name="contenido" required="">
-            {!!$producto->contenido!!}
-            </textarea>
-        </div>
-        <div class="input-field col l12 s12">
-            {!!Form::label('Link de video:')!!}
-                        {!!Form::text('video', null , ['class'=>'', ''])!!}
-        </div>
-        <label class="col l12 s12" for="video_descripcion">
-            Descripcion del video
-        </label>
-        <div class="input-field col l12 s12">
-            <textarea class="materialize-textarea" id="video_descripcion" name="video_descripcion" required="">
-            {!!$producto->video_descripcion!!}
-            </textarea>
+            <div class="input-field col l6 s12">
+                {!! Form::label('Tipos de vidrio') !!}<br />
+                {!! Form::select('tiposvidrio[]', $tiposvidrio, null, ['class' => 'form-control', 'multiple' => 'multiple']) !!}
+            </div>
+            <div class="input-field col l6 s12">
+                {!! Form::label('Ventajas') !!}<br />
+                {!! Form::select('ventajas[]', $ventajas, null, ['class' => 'form-control', 'multiple' => 'multiple']) !!}
+            </div>
+            <label class="col l12 s12" for="descripcion">
+                Descripcion
+            </label>
+            <div class="input-field col l12 s12">
+                <textarea class="materialize-textarea" id="descripcion" name="descripcion" required="">
+                {!! $producto->descripcion!!}
+                </textarea>
+            </div>
         </div>
         <div class="col l12 s12 no-padding">
             <button class="boton btn-large right" name="action" type="submit">
-                Crear
+                Editar
             </button>
         </div>
         {!!Form::close()!!}
@@ -96,9 +66,7 @@
 <script src="//cdn.ckeditor.com/4.9.2/full/ckeditor.js">
 </script>
 <script>
-CKEDITOR.replace('descripcion');
-    CKEDITOR.replace('contenido');
-    CKEDITOR.replace('video_descripcion');
+    CKEDITOR.replace('descripcion');
     CKEDITOR.config.height = '150px';
     CKEDITOR.config.width = '100%';
     

@@ -16,7 +16,7 @@ class AddModelosTable extends Migration
         Schema::create('modelos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
-            $table->string('descripcion');
+            $table->text('descripcion')->nullable();
             $table->string('orden');
             $table->string('imagen');
             $table->timestamps();

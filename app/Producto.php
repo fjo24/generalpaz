@@ -18,17 +18,17 @@ class Producto extends Model
 
     public function modelos()
     {
-        return $this->hasMany('App\Modelo');
+        return $this->belongsToMany('App\Modelo', 'modelo_producto', 'producto_id', 'modelo_id');
     }
 
-    public function tipovidrio()
+    public function tiposvidrio()
     {
-        return $this->hasMany('App\Tipovidrio')
+        return $this->belongsToMany('App\Tipovidrio', 'tipovidrio_producto', 'producto_id', 'tipovidrio_id');
     }
 
     public function ventajas()
     {
-        return $this->hasMany('App\Ventaja')
+        return $this->belongsToMany('App\Ventaja', 'ventaja_producto', 'producto_id', 'ventaja_id');
     }
 
 }

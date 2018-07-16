@@ -11,7 +11,7 @@ class Modelo extends Model
 
     public function productos()
     {
-        return $this->belongsTo('App\Producto');
+        return $this->belongsToMany('App\Producto', 'modelo_producto');
     }
 
 }

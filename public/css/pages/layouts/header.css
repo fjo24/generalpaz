@@ -1,0 +1,118 @@
+body {
+	font-style: 'Source Sans Pro';
+	font-size: 17px;
+}
+
+.nav-flex{
+	background-color: white;
+	border: 0px;
+	position: relative;
+	height: 65%;
+	padding-top: 0.2%;
+	color: red;
+	box-shadow: 0 0px 0px -0px rgba(0,0,0,.0);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.header-nav{
+	height: 149px;
+	background-color: white;
+	border: 0px;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+	margin-bottom: 30px;
+}
+
+.logo-header{
+	position: absolute;
+	width: 302px;
+	height: 91px;
+	top:30%;
+	left: -9%;
+	height: 100%;
+}
+
+.banda{
+	position: relative;
+	top: 27px;
+	left: 10px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 17px;
+	word-spacing: 16px;
+}
+
+.linksheader a:hover{
+	color: #A70000;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.ic{
+	position: relative;
+	bottom: 40px;
+	left: 30px;
+}
+.linksheader a{
+	position: relative;
+	left: 695px!important;
+	top: 30px;
+	color: black;
+	margin-bottom: 50px;
+}
+
+.redes-header{
+	position: absolute;
+	top:14px;
+	right: -90px;
+	background-color: #fff;
+}
+
+.iconos-redes{
+	padding-left: 0%;
+	padding-right: 0%;	
+}
+
+.links-header a{
+	position: relative;
+	top:42px;
+	left: 32%;
+	width: 400px;
+	font-size: 17px;
+	color: black;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #fff;
+	padding: 0px 24px;
+}
+
+.links-header a:active{
+	color: #A70000;
+}
+
+.links-header a:hover{
+	color: #A70000;
+	font-weight: bold;
+	    text-decoration: none!important;
+}
+
+#page{
+	position: relative;
+	display: none;
+}
+
+@media only screen and (max-width: 1003px){
+#page{
+    position: relative;
+	display: flex;
+	background-color: #A70000;
+  }
+}
+
+
+
+@media only screen and (min-width: 1004px){
+header{
+    position: relative;
+	display: none;
+  }
+}

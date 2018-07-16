@@ -70,6 +70,7 @@ Crear
 $(document).ready(function(){
     $('select').formSelect();
   });
+
 </script>
 @endsection
 

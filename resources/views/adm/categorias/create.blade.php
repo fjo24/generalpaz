@@ -23,29 +23,24 @@
     <div class="col s12">
         {!!Form::open(['route'=>'categorias.store', 'method'=>'POST', 'files' => true])!!}
         <div class="row">
-            <div class="input-field col l6 s12">
-                {!!Form::label('Nombre:')!!}
-						{!!Form::text('nombre', null , ['class'=>'', 'required'])!!}
-            </div>
-            <div class="input-field col l6 s12">
-                {!!Form::label('orden:')!!}
-						{!!Form::text('orden', null , ['class'=>'', 'required'])!!}
-            </div>
-            <div class="input-field col l6 s12">
-                {!! Form::select('id_superior', $categorias, null, ['class' => 'form-control', 'placeholder' => 'Categoria']) !!}
-            </div>
-            <div class="file-field input-field col l6 s12">
-                <div class="btn">
-                    <span>
-                        Imagen
-                    </span>
-                    {!! Form::file('imagen') !!}
+                    <div class="input-field col l4 s12">
+                        {!!Form::label('Nombre:')!!}
+                        {!!Form::text('nombre', null , ['class'=>'', 'required'])!!}
+                    </div>
+                    <div class="input-field col l4 s12">
+                        {!!Form::label('orden:')!!}
+                        {!!Form::text('orden', null , ['class'=>'', 'required'])!!}
+                    </div>
+                    <div class="file-field input-field col l4 s12">
+                        <div class="btn">
+                            <span>Imagen</span>
+                            {!! Form::file('imagen') !!}
+                        </div>
+                        <div class="file-path-wrapper">
+                            {!! Form::text('imagen',null, ['class'=>'file-path']) !!}
+                        </div>
+                    </div>
                 </div>
-                <div class="file-path-wrapper">
-                    {!! Form::text('imagen',null, ['class'=>'file-path']) !!}
-                </div>
-            </div>
-        </div>
         <div class="col l12 s12 no-padding">
             <button class="boton btn-large right" name="action" type="submit">
 Crear

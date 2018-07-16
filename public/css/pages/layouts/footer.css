@@ -1,0 +1,113 @@
+ footer {
+ 	background: url(/img/layouts/img-fondo.png);
+ 	background-repeat: no-repeat;
+ 	background-position: center;
+ 	font-family: 'Source Sans Pro', sans-serif;
+ 	font-size: 16px;
+ 	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+ }
+
+.footer-box{
+	color: #000;
+	position: relative;
+	height: 246px;
+	background-color: #171B42;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	bottom: 0px;
+	box-shadow: 0 0px 0px -0px rgba(0,0,0,.0);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.item-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.sitemap a, h5, div{
+	font-size: 16px;
+}
+
+
+
+.sitemap a{
+	padding-top: -50%;
+	padding-bottom: -30%;
+	line-height: 33px;
+	height: 50%
+}
+
+.sitemap a:hover{
+	color: #32398E;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.sitemap{
+	position: absolute;
+	width: 40%;
+	top:13%;
+	left: 7%;
+	padding-right: 20px;
+}
+
+.top{
+	position: absolute;
+	width: 40%;
+	top:15%;
+	left: 25%;
+	padding-right: 0px;
+	margin-right: 0px;	
+}
+
+.company img{
+	filter: invert(1);
+}
+
+table{
+	border-collapse: separate;
+  	border-spacing: 0px 5px;
+}
+
+.linea{
+	position: absolute;
+	width: 107%;
+	height: .01px;
+	top:65%;
+	left: 300px;
+}
+.company a{
+}
+
+.datos{
+	position: absolute;
+	width: 20%;
+	height: 70%;
+	top:20px;
+	right: 4%;
+	padding-left: 0px;
+	margin-right: 0px;
+	font-size: 16px;
+}
+
+.line{
+	position: absolute;
+	padding-left: 0%;
+	padding-right: 0%;	
+	right: 48%;
+	bottom: 90%;
+}
+
+.datos a{
+}
+
+footer span{
+	font-weight: bold;
+	font-size: 16px;
+}

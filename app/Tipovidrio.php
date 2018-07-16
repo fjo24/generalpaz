@@ -8,7 +8,7 @@ class Tipovidrio extends Model
 {
 
     protected $table = "tipovidrio";
-    protected $fillable = ['nombre', 'descripcion','contenido', 'orden'];
+    protected $fillable = ['nombre', 'descripcion','contenido', 'orden', 'imagen'];
 
     public function imagenes()
     {
@@ -17,6 +17,6 @@ class Tipovidrio extends Model
 
     public function productos()
     {
-        return $this->belongsTo('App\Producto');
-    }   
+        return $this->belongsToMany('App\Producto', 'tipovidrio_producto');
+    }
 }

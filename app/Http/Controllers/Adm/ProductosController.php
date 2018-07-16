@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductosRequest;
 use App\Imgproducto;
 use App\Producto;
+use App\Modelo;
+use App\Tipovidrio;
+use App\Ventaja;
 use Illuminate\Http\Request;
 
 class ProductosController extends Controller
@@ -21,27 +24,26 @@ class ProductosController extends Controller
 
     public function create()
     {
+
+        $modelos = Modelo::OrderBy('nombre', 'ASC')->pluck('nombre', 'id')->all();
+        $tiposvidrio = Tipovidrio::OrderBy('nombre', 'ASC')->pluck('nombre', 'id')->all();
+        $ventajas = Ventaja::OrderBy('nombre', 'ASC')->pluck('nombre', 'id')->all();
         $categorias = Categoria::orderBy('nombre', 'ASC')->pluck('nombre', 'id')->all();
-        return view('adm.productos.create', compact('categorias'));
+        return view('adm.productos.create', compact('categorias', 'modelos', 'tiposvidrio', 'ventajas'));
     }
 
     public function store(ProductosRequest $request)
     {
         $producto                    = new Producto();
         $producto->nombre            = $request->nombre;
-        $producto->codigo            = $request->codigo;
         $producto->orden             = $request->orden;
-        $producto->embalaje             = $request->embalaje;
-        $producto->medidas           = $request->medidas;
         $producto->descripcion       = $request->descripcion;
-        $producto->contenido         = $request->contenido;
         $producto->categoria_id      = $request->categoria_id;
-        $producto->video             = $request->video;
-        $producto->video_descripcion = $request->video_descripcion;
-        $producto->precio            = $request->precio;
-        $producto->visible           = $request->visible;
-        $producto->tipo           = $request->tipo;
         $producto->save();
+
+        $producto->modelos()->sync($request->get('modelos'));
+        $producto->tiposvidrio()->sync($request->get('tiposvidrio'));
+        $producto->ventajas()->sync($request->get('ventajas'));
 
         return redirect()->route('productos.index');
     }
@@ -54,8 +56,11 @@ class ProductosController extends Controller
     public function edit($id)
     {
         $categorias = Categoria::orderBy('nombre', 'ASC')->pluck('nombre', 'id')->all();
+        $modelos = Modelo::OrderBy('nombre', 'ASC')->pluck('nombre', 'id')->all();
+        $tiposvidrio = Tipovidrio::OrderBy('nombre', 'ASC')->pluck('nombre', 'id')->all();
+        $ventajas = Ventaja::OrderBy('nombre', 'ASC')->pluck('nombre', 'id')->all();
         $producto   = Producto::find($id);
-        return view('adm.productos.edit', compact('producto', 'categorias'));
+        return view('adm.productos.edit', compact('producto', 'categorias', 'modelos', 'tiposvidrio', 'ventajas'));
     }
 
     public function update(ProductosRequest $request, $id)
@@ -63,18 +68,13 @@ class ProductosController extends Controller
         $producto                    = Producto::find($id);
         $producto->nombre            = $request->nombre;
         $producto->orden             = $request->orden;
-        $producto->embalaje          = $request->embalaje;
-        $producto->medidas           = $request->medidas;
-        $producto->codigo            = $request->codigo;
         $producto->descripcion       = $request->descripcion;
-        $producto->contenido         = $request->contenido;
         $producto->categoria_id      = $request->categoria_id;
-        $producto->video             = $request->video;
-        $producto->video_descripcion = $request->video_descripcion;
-        $producto->precio            = $request->precio;
-        $producto->visible           = $request->visible;
-        $producto->tipo           = $request->tipo;
         $producto->save();
+
+        $producto->modelos()->sync($request->get('modelos'));
+        $producto->tiposvidrio()->sync($request->get('tiposvidrio'));
+        $producto->ventajas()->sync($request->get('ventajas'));
 
         return redirect()->route('productos.index');
     }

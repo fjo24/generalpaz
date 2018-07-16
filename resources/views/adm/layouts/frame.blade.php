@@ -173,7 +173,6 @@
                             </ul>
                         </div>
                     </li>
-                    <!--  
                     <li class="bold">
                         <a class="collapsible-header waves-effect waves-admin">
                             <i class="material-icons">
@@ -203,9 +202,39 @@
                                         Editar Producto
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="{{route('modelos.create')}}">
+                                        Crear modelo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{route('modelos.index')}}">
+                                        Editar modelo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{route('ventajas.create')}}">
+                                        Crear ventaja
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{route('ventajas.index')}}">
+                                        Editar ventaja
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{route('tiposvidrio.create')}}">
+                                        Crear tipo de vidrio
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{route('tiposvidrio.index')}}">
+                                        Editar tipo de vidrio
+                                    </a>
+                                </li>
                             </ul>
                         </div>
-                    </li>-->
+                    </li>
                     <li class="bold">
                         <a class="collapsible-header waves-effect waves-admin">
                             <i class="material-icons">

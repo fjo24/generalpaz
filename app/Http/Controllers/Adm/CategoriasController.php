@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Adm;
 use App\Categoria;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoriasRequest;
+use Illuminate\Http\Request;
 
 class CategoriasController extends Controller
 {
@@ -24,7 +25,6 @@ class CategoriasController extends Controller
     {
 
         $categoria              = new Categoria();
-        $categoria->id_superior = $request->id_superior;
         $categoria->nombre      = $request->nombre;
         $categoria->orden       = $request->orden;
         $id                     = Categoria::all()->max('id');
@@ -56,9 +56,6 @@ class CategoriasController extends Controller
     public function update(CategoriasRequest $request, $id)
     {
         $categoria = Categoria::find($id);
-        if ($id != $request->id_superior) {
-            $categoria->id_superior = $request->id_superior;
-        }
         $categoria->nombre = $request->nombre;
         $categoria->orden  = $request->orden;
 

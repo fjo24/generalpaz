@@ -16,7 +16,7 @@ class AddProductosTable extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
-            $table->string('descripcion');
+            $table->text('descripcion');
             $table->string('orden');
             $table->integer('categoria_id')->unsigned();
             $table->integer('modelo_id')->unsigned()->nullable();
@@ -24,11 +24,41 @@ class AddProductosTable extends Migration
             $table->integer('ventaja_id')->unsigned()->nullable();
 
             $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
-            $table->foreign('modelo_id')->references('id')->on('modelos')->onDelete('cascade');
-            $table->foreign('tipovidrio_id')->references('id')->on('tipovidrio')->onDelete('cascade');
-            $table->foreign('ventaja_id')->references('id')->on('ventajas')->onDelete('cascade');
 
             $table->timestamps();
+        });
+
+        Schema::create('modelo_producto', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('modelo_id')->unsigned();
+            $table->integer('producto_id')->unsigned();
+            $table->timestamps();
+            
+            $table->foreign('modelo_id')->references('id')->on('modelos')->onDelete('cascade');
+            $table->foreign('producto_id')->references('id')->on('productos')->onDelete('cascade');
+            
+        });
+
+        Schema::create('tipovidrio_producto', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('tipovidrio_id')->unsigned();
+            $table->integer('producto_id')->unsigned();
+            $table->timestamps();
+            
+            $table->foreign('tipovidrio_id')->references('id')->on('tipovidrio')->onDelete('cascade');
+            $table->foreign('producto_id')->references('id')->on('productos')->onDelete('cascade');
+            
+        });
+
+        Schema::create('ventaja_producto', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('ventaja_id')->unsigned();
+            $table->integer('producto_id')->unsigned();
+            $table->timestamps();
+            
+            $table->foreign('ventaja_id')->references('id')->on('ventajas')->onDelete('cascade');
+            $table->foreign('producto_id')->references('id')->on('productos')->onDelete('cascade');
+            
         });
     }
 
