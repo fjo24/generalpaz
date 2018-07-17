@@ -28,9 +28,15 @@ body {
 	position: absolute;
 	width: 302px;
 	height: 91px;
-	top:30%;
-	left: -9%;
-	height: 100%;
+	top: 30%;
+    left: -10%;
+    height: 100%;
+}
+
+.page-footer {
+    padding-top: 20px;
+    color: #fff;
+    background-color: #363636!important;
 }
 
 .banda{
@@ -39,7 +45,7 @@ body {
 	left: 10px;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 17px;
-	word-spacing: 16px;
+	word-spacing: 19px;
 }
 
 .linksheader a:hover{
@@ -64,7 +70,7 @@ body {
 .redes-header{
 	position: absolute;
 	top:14px;
-	right: -90px;
+	right: -10%;
 	background-color: #fff;
 }
 
