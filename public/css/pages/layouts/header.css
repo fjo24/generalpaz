@@ -33,6 +33,17 @@ body {
     height: 100%;
 }
 
+@media only screen and (max-width: 900px){
+.logo-header{
+	position: absolute;
+	width: 302px;
+	height: 91px;
+	top: 30%;
+    left: 10%;
+    height: 100%;
+}
+}
+
 .page-footer {
     padding-top: 20px;
     color: #fff;
@@ -121,4 +132,6 @@ header{
     position: relative;
 	display: none;
   }
+
+  
 }

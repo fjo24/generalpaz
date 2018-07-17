@@ -7,8 +7,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 //HOME
 Route::get('/', 'PaginasController@home')->name('inicio');
 
+//INFO DE PRODUCTO
+Route::get('productoinfo/{id}', 'PaginasController@productoinfo')->name('productoinfo');
+
 //PRODUCTOS
-Route::get('/productos', 'PaginasController@productos')->name('productos');
+Route::get('/productos/{categoria_id}',  'PaginasController@productos')->name('productos');
+
+//CATEGORIAS
+Route::get('/categorias', 'PaginasController@categorias');
 
 //EMPRESAS
 Route::get('/empresa', 'PaginasController@empresa')->name('empresa');

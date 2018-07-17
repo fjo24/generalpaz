@@ -1,10 +1,8 @@
-@extends('adm.layout.frame')
+@extends('adm.layouts.frame')
 
 @section('titulo', 'Editar metadato de ' .$metadato->seccion)
 
 @section('contenido')
-<main>
-	<div class="container">
 	    @if(count($errors) > 0)
 		<div class="col s12 card-panel red lighten-4 red-text text-darken-4">
 	  		<ul>
@@ -41,7 +39,6 @@
 			{!!Form::close()!!} 
 			</div>
 		</div>
-	</div>
-</main>
+
 
 @endsection

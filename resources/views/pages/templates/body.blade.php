@@ -46,12 +46,15 @@ header('Access-Control-Allow-Origin: *');
         <!-- CABECERA -->
         <header>
             @include('pages.templates.header')
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript">
+        </script>
         </header>
         <main style="">
             @yield('contenido')
         </main>
         @include('pages.templates.footer') 
         <!--Import jQuery before materialize.js-->
+
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript">
         </script>
         <!-- Materialize Core JavaScript -->

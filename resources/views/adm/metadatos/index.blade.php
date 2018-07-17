@@ -1,10 +1,8 @@
-@extends('adm.layout.frame')
+@extends('adm.layouts.frame')
 
 @section('titulo', 'Metadatos')
 
 @section('contenido')
-<main>
-	<div class="container">
 	    @if(count($errors) > 0)
 		<div class="col s12 card-panel red lighten-4 red-text text-darken-4">
 	  		<ul>
@@ -21,7 +19,7 @@
 		@endif
 
 		<div class="row">
-			<div class="col s12">
+			<div class="col l12 s12">
 				<table class="highlight bordered">
 					<thead>
 						<td>Sección</td>
@@ -44,7 +42,5 @@
 				</table>			
 			</div>
 		</div>
-    </div>
-</main>
 
 @endsection
