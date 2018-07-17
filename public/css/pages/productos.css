@@ -1,3 +1,24 @@
+
+.n-line {
+    position: relative!important;
+    width: 15%!important;
+    margin-top: 5.5%!important;
+    height: 1px!important;
+    border: 1px!important;
+    border-radius: 10px!important;
+    background-color: black!important;
+}
+.n-line {
+    position: relative!important;
+    width: 48px!important;
+    height: 1px!important;
+    border: 1px!important;
+    border-radius: 10px!important;
+    background-color: #32398C!important;
+    /* left: -54px; */
+    right: 42%!important;
+    top: 5%!important;
+}
 .div-product{
 	margin-top: 2%;
 	display: flex;
@@ -203,3 +224,67 @@ border: none;
 	color: #A70000;
 	font-weight: bold;
 }
+
+.tabs .tab a {
+    color: #595959!important;
+    font-size: 18px!important;
+    font-family: 'Source Sans Pro', sans-serif!important;
+}
+
+.tabs .tab a:hover{
+    background-color: #FAFAFA!important;
+    color: #ee6e73;
+}
+
+.tabs .tab a:active{
+    color: #ee6e73;
+    border-bottom: none;
+}
+
+.tabs .indicator {
+    position: absolute;
+    display: none;
+    bottom: 46px!important;
+    height: 0px;
+    background-color: #d7d7d5!important;
+    will-change: left, right;
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+    background-color: white!important;
+    outline: none;
+    border-right: 2px solid #d7d7d5!important;
+    border-left: 2px solid #d7d7d5!important;
+    border-bottom: 0px solid #d7d7d5!important;
+    border-top: 2px solid #d7d7d5!important;
+}
+
+.tabs .tab a:active{
+    background-color: white!important;
+    outline: none;
+    border-right: 2px solid #d7d7d5!important;
+    border-left: 2px solid #d7d7d5!important;
+    border-bottom: 0px solid #d7d7d5!important;
+    border-top: 2px solid #d7d7d5!important;
+}
+
+.tabs .tab a {
+    border-bottom: 2px solid #d7d7d5!important;
+}
+
+.modelo_body{
+	/*border-right: 2px solid #d7d7d5!important;*/
+    /*border-left: 2px solid #d7d7d5!important;*/
+    /*border-bottom: 2px solid #d7d7d5!important;*/
+}
+
+.galeria2{
+    margin-top: 4%;
+}
+
+.nombreproducto{
+    font-size: 26px!important;
+    color: #A70000;
+    font-family: 'Source Sans Pro', sans-serif!important;
+}
+

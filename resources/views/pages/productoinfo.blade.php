@@ -59,7 +59,7 @@
     <div class="nombreproducto">
         {!! $p->nombre !!}
     </div>
-    <hr class="pro-line"/>
+    <hr class="n-line left"/>
     <div class="descripcionproducto">
         {!! $p->descripcion !!}
     </div>
@@ -77,11 +77,11 @@
     <div class="col s12">
       <ul class="tabs">
         <li class="tab col s4"><a class="active" href="#modelos">Modelos</a></li>
-        <li class="tab col s4"><a class="" href="#vidrios">Test 2</a></li>
-        <li class="tab col s4"><a href="#ventajas">Test 4</a></li>
+        <li class="tab col s4"><a class="" href="#vidrios">Tipologías de Vidrio</a></li>
+        <li class="tab col s4"><a href="#ventajas">Ventajas</a></li>
       </ul>
     </div>
-    <div id="modelos" class="col s12">
+    <div id="modelos" class="modelo_body col s12">
         <div class="col l12 m12 s12" >
                 @foreach($p->modelos as $modelo)
             <div class="col l2 m2 s12 center" >
@@ -111,8 +111,69 @@
                 @endforeach   
         </div>
     </div>
-    <div id="vidrios" class="col s12">Test 2</div>
-    <div id="ventajas" class="col s12">Test 4</div>
+    <div id="vidrios" class="col s12">
+    <div class="col l12 m12 s12" >
+                @foreach($p->tiposvidrio as $vidrio)
+            <div class="col l2 m2 s12 center" >
+                <a href="" data-target="modalv{!! $vidrio->id !!}" class="modal-trigger" style=""> 
+                    <img style="" src="{{asset($vidrio->imagen)}}" alt="">
+                    <span class="modelo_nombre">{{$vidrio->nombre}}</span>
+                </a>
+                <!-- Modal Structure -->
+                  <div id="modalv{!! $vidrio->id !!}" class="modal">
+                    <div class="modal-content">
+                        <h4>{!! $vidrio->nombre !!}<a href="#!" class="right modal-close waves-effect waves-green btn-flat" style="font-family: 'Lato';color: #B3004A;font-weight: bold;">Cerrar</a></h4>
+                        <div class="row">
+                            <div class="col l12 m12 s12" style="padding-left: 0px;">   
+                                <div class="col l3 m3 s3" style="padding-left: 0px;">    
+                                    <img class="responsive-img modal_img" src="{{ asset($vidrio->imagen) }}"/>
+                                </div> 
+                                <div class="col l9 m9 s9">   
+                                    <div class="modal_descripcion left">
+                                        {!! $vidrio->descripcion !!}
+                                    </div> 
+                                    <div class="modal_descripcion left">
+                                        {!! $vidrio->contenido !!}
+                                    </div> 
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+                @endforeach   
+        </div>
+        </div>
+    <div id="ventajas" class="col s12">
+        <div class="col l12 m12 s12" >
+                @foreach($p->ventajas as $ventaja)
+            <div class="col l2 m2 s12 center" >
+                <a href="" data-target="modalve{!! $ventaja->id !!}" class="modal-trigger" style=""> 
+                    <img style="" src="{{asset($ventaja->imagen)}}" alt="">
+                    <span class="modelo_nombre">{{$ventaja->nombre}}</span>
+                </a>
+                <!-- Modal Structure -->
+                  <div id="modalve{!! $ventaja->id !!}" class="modal">
+                    <div class="modal-content">
+                        <h4>{!! $ventaja->nombre !!}<a href="#!" class="right modal-close waves-effect waves-green btn-flat" style="font-family: 'Lato';color: #B3004A;font-weight: bold;">Cerrar</a></h4>
+                        <div class="row">
+                            <div class="col l12 m12 s12" style="padding-left: 0px;">   
+                                <div class="col l3 m3 s3" style="padding-left: 0px;">    
+                                    <img class="responsive-img modal_img" src="{{ asset($ventaja->imagen) }}"/>
+                                </div> 
+                                <div class="col l9 m9 s9">   
+                                    <div class="modal_descripcion left">
+                                        {!! $ventaja->descripcion !!}
+                                    </div> 
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+                @endforeach   
+        </div>
+    </div>
   </div>
                         </div>
                     </div>

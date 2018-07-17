@@ -17,6 +17,7 @@ class AddVentajasTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('orden');
+            $table->text('descripcion')->nullable();
             $table->string('imagen');
             $table->timestamps();
         });
