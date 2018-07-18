@@ -60,6 +60,11 @@
         {!! $p->nombre !!}
     </div>
     <hr class="n-line left"/>
+    <br><br>
+    <div class="left detalles">
+        Detalles
+    </div>
+    <br>
     <div class="descripcionproducto">
         {!! $p->descripcion !!}
     </div>

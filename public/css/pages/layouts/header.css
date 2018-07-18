@@ -136,3 +136,37 @@ header{
 
   
 }
+
+
+
+/* lupita para buscador en movil*/
+
+#mobile_search {
+    /*display: none;*/
+    width: 45px;
+    /*ancho por defecto*/
+    background: #ededed url(img/redes/buscador.jpg) no-repeat 9px center;
+    /*icono lupa*/
+    padding: 9px 10px 9px 32px;
+    border-radius: 15em;
+    -webkit-transition: all .5s;
+    /* transición de .5seg a todos los elementos para chrome*/
+    -moz-transition: all .5s;
+    /* transición de .5seg a todos los elementos para mozilla*/
+    -o-transition: all .5s;
+    /* transición de .5seg a todos los elementos para ophera*/
+    transition: all .5s;
+    /* transición de .5seg a todos los elementos*/
+    outline: none;
+    /* ocultar el fucos automático de los input */
+}
+#mobile_search:focus {
+    width: 130px;
+    /*tamaño del boton buscar al hacer click*/
+    padding-left: 32px;
+    /*espacio entre el icono lupa y el placeholder*/
+    color: #000;
+    background-color: #FFF;
+}
+
+/* FIN lupita para buscador en movil*/

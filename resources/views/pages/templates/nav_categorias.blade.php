@@ -8,6 +8,7 @@
             <a href="{{ route('productos', $cat->id)}}">
                 <div class="categorias_header collapsible-header">
                     {{$cat->nombre}}
+                                        
                                             @if($categoria->id==$cat->id)
                     <i class="flechita material-icons" style="position: absolute;left: 23%;">
                         keyboard_arrow_down

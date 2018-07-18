@@ -7,6 +7,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 //HOME
 Route::get('/', 'PaginasController@home')->name('inicio');
 
+//BUSCADOR
+Route::post('productos/buscar', [
+    'uses' => 'PaginasController@buscar',
+    'as'   => 'buscar',
+]);
+
+
 //SERVICIOS
 Route::get('/servicios', 'PaginasController@servicios')->name('servicios');
 
@@ -27,6 +34,13 @@ Route::get('/contacto/{producto}', 'PaginasController@contacto')->name('contacto
 Route::post('enviar-mail', [
     'uses' => 'PaginasController@enviarmail',
     'as'   => 'enviarmail',
+]);
+
+//TRABAJA CON NOSOTROS
+Route::get('/trabaja', 'PaginasController@trabaja')->name('trabaja');
+Route::post('enviarcv', [
+    'uses' => 'PaginasController@enviarcv',
+    'as'   => 'enviarcv',
 ]);
 
     //PRESUPUESTO
@@ -149,7 +163,7 @@ Route::prefix('adm')->group(function () {
     /*------------Imagen----------------*/
     Route::post('imgcertificaciones', 'Adm\CertificacionesController@nuevaimagen')->name('imgcertificaciones'); //index del modulo imagenes
     //agregar nuevas imagenes de productos
-    Route::delete('imgproducto/{id}/destroy', [
+    Route::delete('imgcertificaciones/{id}/destroy', [
         'uses' => 'Adm\CertificacionesController@destroyimg',
         'as'   => 'imgcertificaciones.destroy',
     ]);

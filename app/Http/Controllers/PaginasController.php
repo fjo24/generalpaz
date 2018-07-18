@@ -141,18 +141,15 @@ class PaginasController extends Controller
         $ready = 0;
         //$metadatos = Metadato::where('section','buscar')->get();
         $activo    = 'productos';
-        $productos = Producto::where('nombre', 'like', '%' . $busqueda . '%')->
-            orwhere('codigo', 'like', '%' . $busqueda . '%')->get();
-
+        $productos = Producto::where('nombre', 'like', '%' . $busqueda . '%')->get();
+        $categoria = Categoria::find(1);
         $activo        = 'productos';
-        $categorias    = Categoria::where('id_superior', null)->orderBy('orden', 'asc')->get();
-        $subcategorias = Categoria::whereNotNull('id_superior')->orderBy('orden', 'asc')->get();
-        $productos     = Producto::orderBy('categoria_id')->get();
-        $todos         = Producto::where('nombre', 'like', '%' . $busqueda . '%')->
-            orwhere('codigo', 'like', '%' . $busqueda . '%')->get();
+        $categorias    = Categoria::orderBy('orden', 'asc')->get();
+
+        $todos         = Producto::where('nombre', 'like', '%' . $busqueda . '%')->get();
         $ready = 0;
 
-        return view('pages.productos', compact('categorias', 'subcategorias', 'productos', 'productos_directos', 'activo', 'todos', 'ready'));
+        return view('pages.productos', compact('categorias', 'subcategorias', 'productos', 'productos_directos', 'activo', 'todos', 'ready', 'categoria'));
 
     }
 
@@ -162,4 +159,40 @@ class PaginasController extends Controller
         return view('pages.clientes', compact('clientes'));
     }
 
+    public function trabaja()
+    {
+        //return ($producto);
+        $activo = 'contacto';
+        return view('pages.trabaja', compact('activo', 'contenido'));
+    }
+
+    public function enviarcv(Request $request)
+    {
+        $activo   = 'contacto';
+        $dato     = Dato::where('tipo', 'mail')->first();
+        $nombre   = $request->nombre;
+        $apellido = $request->apellido;
+        $telefono  = $request->telefono;
+        $email    = $request->email;
+        $documento = $request->documento;
+        $domicilio  = $request->domicilio;
+       //     dd($producto);
+        Mail::send('pages.emails.trabajamail', ['nombre' => $nombre, 'apellido' => $apellido, 'telefono' => $telefono, 'email' => $email, 'documento' => $documento, 'domicilio' => $domicilio], function ($message){
+
+            $dato = Dato::where('tipo', 'email')->first();
+            $message->from('info@aberturastolosa.com.ar', 'Aberturas General Paz');
+
+            $message->to($dato->descripcion);
+
+            //Add a subject
+            $message->subject('Candidato: ');
+
+        });
+        if (Mail::failures()) {
+            return view('pages.trabaja', compact('activo', 'contenido'));
+        }
+        return view('pages.trabaja', compact('activo', 'contenido'));
+    }
+
+    
 }

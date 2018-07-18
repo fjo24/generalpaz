@@ -14,10 +14,9 @@
     height: 1px!important;
     border: 1px!important;
     border-radius: 10px!important;
-    background-color: #32398C!important;
-    /* left: -54px; */
-    right: 42%!important;
-    top: 5%!important;
+    background-color: black!important;
+    left: 0px!important;
+    top: -8px!important;
 }
 .div-product{
 	margin-top: 2%;
@@ -94,8 +93,8 @@
 
 .categorias h7{
 	padding-left: 43px;
+    bottom: 10px;
 	position: relative;
-	bottom:40px;
 }
 
 .p_info p{
