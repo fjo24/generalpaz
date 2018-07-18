@@ -1,5 +1,5 @@
 @extends('pages.templates.body')
-@section('title', 'Excelsior - Obra')
+@section('title', 'Aberturas General Paz - Obra')
 @section('css')
 <link href="{{ asset('css/pages/galeria.css') }}" rel="stylesheet"/>
 @endsection

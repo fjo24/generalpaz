@@ -17,6 +17,7 @@ body {
 }
 
 .header-nav{
+	    margin-bottom: 0!important;
 	height: 149px;
 	background-color: white;
 	border: 0px;

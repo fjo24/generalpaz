@@ -52,14 +52,14 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 
 .tbanner{
 	font-size: 35px;
-	font-family: 'Asap';
+	font-family: 'Source Sans Pro', sans-serif!important;
 	font-weight: bold;
 	color: #FD3F72;
 }
 
 .tbanner2 p{
 	color: #595959;
-	font-family: 'Asap';
+	font-family: 'Source Sans Pro', sans-serif!important;
 	font-size: 18px;
 	position: relative;
     bottom: 14px;
@@ -120,37 +120,37 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 }
 
 footer .linksb {
-    font-family: 'Lato';
+    font-family: 'Source Sans Pro', sans-serif!important;
     padding-left: 0px;
     text-align: center;
 }
 
 footer .titulo-footer {
-    font-family: 'Lato';   
+    font-family: 'Source Sans Pro', sans-serif!important;   
     text-align: center;
     padding-left: 0px;
 }
 
 footer .linksb {
-    font-family: 'Lato';
+    font-family: 'Source Sans Pro', sans-serif!important;
     padding-left: 0px;
     text-align: center;
 }
 
 footer .titulo-footer2 {
-    font-family: 'Lato';   
+    font-family: 'Source Sans Pro', sans-serif!important;  
     text-align: center;
     padding-left: 0px;
 }
 
 footer .titulo-footer3 {
-    font-family: 'Lato';   
+    font-family: 'Source Sans Pro', sans-serif!important;   
     text-align: center;
     padding-left: 0px;
 }
 
 footer .listlinks2 {
-    font-family: 'Lato';
+    font-family: 'Source Sans Pro', sans-serif!important;
     padding-left: 0px;
     text-align: center;
 }

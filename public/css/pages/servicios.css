@@ -1,0 +1,28 @@
+.titulo_servicio{
+	font-family: 'Source Sans Pro', sans-serif!important;
+	font-size: 47px;
+	color: #A70000;
+}
+
+.contenido_servicio{
+	font-family: 'Source Sans Pro', sans-serif!important;
+	font-size: 18px;
+	color: #595959;
+}
+
+.nombre_servicio p{
+	font-family: 'Source Sans Pro', sans-serif!important;
+	font-size: 18px;
+	color: #A70000;
+	font-weight: bold;
+}
+
+.texto_servicio p{
+	font-family: 'Source Sans Pro', sans-serif!important;
+	font-size: 17px;
+	color: #7F7F7F;
+}
+
+.formulario_servicios{
+	background-color: #FAFAFA;
+}

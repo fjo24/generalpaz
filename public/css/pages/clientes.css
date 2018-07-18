@@ -12,7 +12,7 @@
     top: -4px;
     width: 100px;
     height: 2px!important;
-    background-color: red!important;
+    background-color: #A70000!important;
     border: 0px red;
 }
 .items-cat {
@@ -39,7 +39,7 @@
     margin-top: 57px;
 }
 .texto-ini {
-    font-family: 'Raleway';
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     color: #333333;
     background-color: #F9F9F9;
@@ -56,17 +56,17 @@
     top: 93px;
 }
 .titulo {
-    font-family: 'Raleway'!important;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 30px!important;
     color: #FF0000!important;
 }
 .texto1 {
-    font-family: 'Raleway'!important;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 17px!important;
     color: #504C52!important;
 }
 .texto2 {
-    font-family: 'Raleway'!important;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 24px!important;
     color: #504C52!important;
 }
@@ -90,4 +90,15 @@
 
 .card-action{
     background-color: #F0F0F0!important;
+}
+
+.div-cliente a{
+    font-size:17px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #A70000;
+}
+
+.div-cliente hr{
+    background: black;
+    color: black!important;
 }

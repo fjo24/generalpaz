@@ -23,3 +23,7 @@
   border-top: 1px solid gray;
 
 }  
+
+.slider .indicators .indicator-item.active {
+    background-color: #e0e0e0!important;
+}

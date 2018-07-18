@@ -39,7 +39,7 @@
 				</div>
 				<div class="row">
 					<div class="input-field col l6 s12">
-						{!! Form::select('seccion', ['home' => 'home', 'empresa' => 'empresa'], null, ['class' => 'form-control', 'placeholder' => 'Seleccione sección']) !!}
+						{!! Form::select('seccion', ['home' => 'home', 'empresa' => 'empresa','servicios' => 'servicios', 'presupuesto' => 'presupuesto'], null, ['class' => 'form-control', 'placeholder' => 'Seleccione sección']) !!}
 					</div>
 					<div class="input-field col l6 s12">
 						{!!Form::label('Orden:')!!}

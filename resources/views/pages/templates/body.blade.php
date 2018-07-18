@@ -20,7 +20,7 @@
 header('Access-Control-Allow-Origin: *'); 
 ?>
                                     <link href="http://allfont.es/allfont.css?fonts=raleway-extrabold" rel="stylesheet" type="text/css" />-->
-                                    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+                                    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
                                     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,600,700,800,900" rel="stylesheet" type="text/css"/>
                                     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
                                     <script src='https://www.google.com/recaptcha/api.js'></script>

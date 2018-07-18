@@ -23,13 +23,16 @@
     <div class="col s12">
         {!!Form::model($empresa, ['route'=>['empresas.update',$empresa->id], 'method'=>'PUT', 'files' => true])!!}
         <div class="row">
-            <div class="input-field col l6 s12">
-                {!!Form::label('Nombre:')!!}
-                        {!!Form::text('nombre', null , ['class'=>'', ''])!!}
-            </div>
-            <div class="input-field col l6 s12">
-                {!!Form::label('Link:')!!}
-                        {!!Form::text('link', null , ['class'=>'', ''])!!}
+            <div class="file-field input-field col l6 s12">
+                <div class="btn">
+                    <span>
+                        Imagen
+                    </span>
+                    {!! Form::file('imagen') !!}
+                </div>
+                <div class="file-path-wrapper">
+                    {!! Form::text('imagen',null, ['class'=>'file-path ']) !!}
+                </div>
             </div>
         </div>
         <div class="row">
@@ -49,19 +52,6 @@
                     <textarea class="materialize-textarea" id="contenido" name="contenido" required="">
                         {{$empresa->contenido}}
                     </textarea>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="file-field input-field col l6 s12">
-                <div class="btn">
-                    <span>
-                        Imagen
-                    </span>
-                    {!! Form::file('imagen') !!}
-                </div>
-                <div class="file-path-wrapper">
-                    {!! Form::text('imagen',null, ['class'=>'file-path ']) !!}
                 </div>
             </div>
         </div>

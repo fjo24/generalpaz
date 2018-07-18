@@ -27,10 +27,8 @@ class EmpresasController extends Controller
     public function update(empresaRequest $request, $id)
     {
         $empresa              = Empresa::find($id);
-        $empresa->nombre      = $request->nombre;
         $empresa->descripcion = $request->descripcion;
         $empresa->contenido   = $request->contenido;
-        $empresa->link        = $request->link;
 
         if ($request->hasFile('imagen')) {
             if ($request->file('imagen')->isValid()) {

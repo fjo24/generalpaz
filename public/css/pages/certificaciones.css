@@ -1,0 +1,66 @@
+.home{
+
+	padding-top: 67px;
+	padding-bottom: 5px;
+	height: 110%;
+}
+
+.home div{
+	line-height: 25px;
+}
+
+.home hr{
+	position: relative;
+	bottom: 12px;
+	width: 10%;
+	margin-top: 10px;
+	height: 4px;
+	border: 3px;
+	border-radius:10px;
+	background-color: #A70000;
+}
+
+.certificaciones{
+	position: relative;
+	bottom:40px;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #F6F6F6;
+	padding: 29px 0px 0px 0px;
+	width: 100%;
+}
+
+.certificaciones .titulo{
+	font-size: 32px;
+	line-height: 3px;
+	color: #A70000;
+	font-weight: 400;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.certificaciones .descripcion{
+	font-size: 18px;
+	    line-height: 27px;
+	color: #595959;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.certificaciones .contenido{
+	font-size: 19px;
+	font-family: 'Source Sans Pro', sans-serif;
+	width: 830px;
+	line-height: 35px;
+}
+
+.certificaciones .contenido p{
+	position: relative;
+	left: 21%;
+	color: #595959;
+	    bottom: 48px;
+}
+
+.certificaciones hr{
+	width: 69px;
+    height: 1px;
+    border: 1px solid #A70000;
+    background: #A70000;
+}

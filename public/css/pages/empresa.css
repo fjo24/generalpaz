@@ -6,17 +6,15 @@ img{
 	font-family: 'Source Sans Pro', sans-serif!important;
 	position: relative;
 	top: -20px;
-	height: 500px;
+	height: 593px;
 }
 
 .empresa hr{
-	border: solid 1px #32398E;
+	border: solid 1px #A70000;
 }
 
 .empresa div{
-	line-height: 26px;
-	padding :52px;
-	font-weight: lighter;
+	
 }
 
 .empresa p{
@@ -44,3 +42,20 @@ img{
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
+.descripcion_empresa p{
+	font-family: 'Source Sans Pro', sans-serif!important;
+	font-size: 32px;
+	color: #A70000;
+	width: 90%;
+    margin-left: 5%;
+	line-height: 34px;
+}
+
+.contenido_empresa p{
+	font-family: 'Source Sans Pro', sans-serif!important;
+	font-size: 18px;
+	color: #595959;
+	margin-left: 0;
+    margin-right: 0;
+        width: 100%;
+}

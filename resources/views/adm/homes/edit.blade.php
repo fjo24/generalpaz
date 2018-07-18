@@ -32,17 +32,6 @@
                 {!!Form::label('link:')!!}
 						{!!Form::text('link', null , ['class'=>''])!!}
             </div>
-            <div class="file-field input-field col l6 s12">
-                <div class="btn">
-                    <span>
-                        Imagen
-                    </span>
-                    {!! Form::file('imagen') !!}
-                </div>
-                <div class="file-path-wrapper">
-                    {!! Form::text('imagen',null, ['class'=>'file-path ', 'placeholder' => 'Recomendado (552 x 329)']) !!}
-                </div>
-            </div>
         </div>
         <div class="row">
             <div class="col s12">

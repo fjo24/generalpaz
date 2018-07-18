@@ -5,7 +5,7 @@
 .titulo-cat {
     font-size: 27px;
     color: #FF0000;
-    font-family: 'Asap';
+    font-family: 'Source Sans Pro', sans-serif;
     margin-bottom: 30px;
 }
 .cat-line {
@@ -23,17 +23,15 @@
 }
 .div-nombre {
     display: table;
-    background-color: rgba(179, 0, 74, 0.86);
-    height: 104px;
-    font-weight: 900;
-    font-family: 'Asap';
+    background-color: rgba(165, 0, 0, 0.86);
+    height: 59px;
+    font-family: 'Source Sans Pro', sans-serif;
     justify-content: center;
     align-items: center;
     font-size: 29px;
     position: relative;
     width: 100%;
-    bottom: 104px;
-    color: white;
+    bottom: 66px;
 }
 
 .div-nombrehight {
@@ -41,7 +39,7 @@
     background-color: rgba(179, 0, 74, 0.86);
     height: 104px;
     font-weight: 900;
-    font-family: 'Asap';
+    font-family: 'Source Sans Pro', sans-serif;
     justify-content: center;
     align-items: center;
     font-size: 29px;
@@ -56,7 +54,7 @@
     background-color: rgba(179, 0, 74, 0.86);
     height: 104px;
     font-weight: 900;
-    font-family: 'Asap';
+    font-family: 'Source Sans Pro', sans-serif;
     justify-content: center;
     align-items: center;
     font-size: 29px;
@@ -145,20 +143,20 @@
 }
 
 .tit-dest{
-    font-family: 'Asap';
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 38px;
     color: #FF5F8A;
     font-weight: bold;
 }
 
 .subtit-dest{
-    font-family: 'Asap';
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 22px;
     color: #777777;
 }
 
 .cont-dest{
-    font-family: 'Lato';
+    font-family: 'Source Sans Pro', sans-serif;
     color: #777777;
     font-size: 18px;
 }
@@ -187,7 +185,7 @@
         width: 181px;
     height: 42px!important;
     margin-top: 16px;
-    font-family: 'lato';
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px!important;
     font-weight: bold;
 }

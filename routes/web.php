@@ -7,6 +7,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 //HOME
 Route::get('/', 'PaginasController@home')->name('inicio');
 
+//SERVICIOS
+Route::get('/servicios', 'PaginasController@servicios')->name('servicios');
+
 //INFO DE PRODUCTO
 Route::get('productoinfo/{id}', 'PaginasController@productoinfo')->name('productoinfo');
 
@@ -24,6 +27,13 @@ Route::get('/contacto/{producto}', 'PaginasController@contacto')->name('contacto
 Route::post('enviar-mail', [
     'uses' => 'PaginasController@enviarmail',
     'as'   => 'enviarmail',
+]);
+
+    //PRESUPUESTO
+Route::get('/presupuesto', 'PresupuestoController@index');
+Route::post('enviar-presupuesto',[
+    'uses'=>'PresupuestoController@enviarMail',
+    'as'=>'enviarmail'
 ]);
 
 //CLIENTES
@@ -85,6 +95,8 @@ Route::prefix('adm')->group(function () {
     /*------------DISTRIBUIDORES----------------*/
     Route::resource('distribuidores', 'Adm\DistribuidoresController');
 
+
+
     /*------------EMPRESAS----------------*/
     Route::resource('empresas', 'Adm\EmpresasController');
 
@@ -135,7 +147,12 @@ Route::prefix('adm')->group(function () {
     /*------------TEXTO CERTIFICACIONES----------------*/
     Route::resource('certificaciones', 'Adm\CertificacionesController');
     /*------------Imagen----------------*/
-    Route::post('imgcertificaciones', 'Adm\CertificacionesController@imagenes')->name('imgcertificaciones'); //index del modulo imagenes
+    Route::post('imgcertificaciones', 'Adm\CertificacionesController@nuevaimagen')->name('imgcertificaciones'); //index del modulo imagenes
+    //agregar nuevas imagenes de productos
+    Route::delete('imgproducto/{id}/destroy', [
+        'uses' => 'Adm\CertificacionesController@destroyimg',
+        'as'   => 'imgcertificaciones.destroy',
+    ]);
 
 
 

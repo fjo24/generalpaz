@@ -10,12 +10,14 @@ use App\Dato;
 use App\Destacado_home;
 use App\Destacado_mantenimiento;
 use App\Empresa;
+use App\Imgcertificacion;
 use App\Local;
 use App\Novedad;
 use App\Categoria_obra;
 use App\Obra;
 use App\Cliente;
 use App\Producto;
+use App\Certificacion;
 use App\Servicio;   
 use App\Slider;
 use Illuminate\Http\Request;
@@ -27,15 +29,26 @@ class PaginasController extends Controller
     {
         $activo    = 'home';
         $sliders   = Slider::orderBy('orden', 'ASC')->Where('seccion', 'home')->get();
-        $contenido = Contenido_home::all()->first();
-        return view('pages.home', compact('sliders', 'servicios', 'banner', 'contenido', 'activo'));
+        $home = Contenido_home::all()->first();
+        $destacados = Destacado_home::OrderBy('orden', 'ASC')->get();
+        return view('pages.home', compact('sliders', 'home', 'destacados','activo'));
     }
 
     public function empresa()
     {
         $sliders   = Slider::orderBy('orden', 'ASC')->Where('seccion', 'empresa')->get();
         $contenido = Empresa::all()->first();
-        return view('pages.empresa', compact('sliders', 'contenido'));
+        $imagenes = Imgcertificacion::orderBy('id', 'ASC')->get();
+        $certificacion = Certificacion::all()->first();
+        return view('pages.empresa', compact('sliders', 'contenido', 'imagenes', 'certificacion'));
+    }
+
+    public function servicios()
+    {
+        $activo = 'servicios';
+        $servicios = Servicio::OrderBy('orden', 'ASC')->get();
+        $sliders   = Slider::orderBy('orden', 'ASC')->Where('seccion', 'servicios')->get();
+        return view('pages.servicios', compact('sliders', 'servicios', 'activo'));
     }
 
 

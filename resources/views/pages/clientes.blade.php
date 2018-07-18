@@ -1,5 +1,5 @@
 @extends('pages.templates.body')
-@section('title', 'Excelsior - Consejos de Seguridad')
+@section('title', 'Aberturas General Paz - Clientes')
 @section('css')
 <link href="{{ asset('css/pages/clientes.css') }}" rel="stylesheet"/>
 @endsection
@@ -19,22 +19,21 @@
             <div class="items-servicio row" style="align-items: center;">
                 <div class="bloquecard col l12 s12 m12">
                     @foreach($clientes as $cliente)
-                    <div class="col l4 s12 m6">
-                        <div class="card white darken-1" style="">
-                            <div class="card-content white-text">
-                                <a href="{{$cliente->link}}">
-                                <img alt="" src="{{asset($cliente->imagen)}}" style="">
-                                </img>
-                            </a>
+                            <div class="col l3 s12 m3">
+                                <div class="div-cliente">
+                                    <a href="{{$cliente->link}}">
+                                        <img alt="" class="responsive-img" src="{{asset($cliente->imagen)}}" style=""/>
+
+                                            <hr align="center"/>
+                                                <div class="div-nombre">
+                                                    {!!$cliente->nombre !!}
+                                                </div>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="card-action">
-                                <a href="{{$cliente->link}}">
-                                    {{$cliente->nombre}}
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
+                            @endforeach
+
+                
                 </div>
             </div>
         </div>

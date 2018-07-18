@@ -40,7 +40,7 @@
 				</div>
 				<div class="row">
 					<div class="input-field col l6 s12">
-						{!! Form::select('seccion', ['home' => 'home', 'empresa' => 'empresa'], null, ['class' => 'form-control', 'placeholder' => 'Seleccione sección']) !!}
+						{!! Form::select('seccion', ['home' => 'home', 'empresa' => 'empresa','servicios' => 'servicios', 'presupuesto' => 'presupuesto'], null, ['class' => 'form-control', 'placeholder' => 'Seleccione sección']) !!}
 					</div>
 					<div class="input-field col l6 s12">
 						{!!Form::label('Orden:')!!}
@@ -60,12 +60,9 @@
 				    </div>
 				</div>
 				<div class="col l12 s12 no-padding">
-            <button class="btn-large waves-effect waves-light pink right" name="action" type="submit">
-                Crear
-                <i class="material-icons right">
-                    send
-                </i>
-            </button>
+            <button class="boton btn-large right" name="action" type="submit">
+Crear
+                    </button>
         </div>
 			{!!Form::close()!!} 
 		</div>
