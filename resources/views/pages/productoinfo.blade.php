@@ -63,7 +63,7 @@
     <div class="descripcionproducto">
         {!! $p->descripcion !!}
     </div>
-    <a href="">
+    <a href="{{ url('/contacto', $p->nombre) }}">
         <button class="pedido btn btn-default left" href="" style="background-color: #7D0045;">
             <span class="rpedido">
                 REALIZAR CONSULTA

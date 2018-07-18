@@ -8,7 +8,7 @@
             <div class="redes-header" style="word-spacing: 10px;">
               <img src="{{asset('img/redes/whatsapp.jpg')}}"><a href="{{ url('servicios') }}" style="color: #F7F7F7;font-size: 16px;font-family: 'Source Sans Pro', sans-serif;word-spacing: 3px;"> Whats App · {{ $telefono2->descripcion}}    </a>
                   <a style="color: black;"> |</a>
-                  <a href="{{ url('obra') }}" style="color: black;"> CONTACTO     </a>
+                  <a href="{{ url('/contacto', 'General') }}" style="color: black;"> CONTACTO     </a>
                   <a style="color: black;"> |</a>
                   <a href="{{ url('fabrica') }}" style="color: black;"> TRABAJA CON NOSOTROS      </a>
                   <a href="{{ $facebook->link}}" class="iconos-redes"><img src="{{asset('img/redes/buscador.jpg')}}"></a>
@@ -26,11 +26,11 @@
                   <a> |</a>
                   <a href="{{ url('servicios') }}" > SERVICIOS     </a>
                   <a> |</a>
-                  <a href="{{ url('obra') }}" > OBRA     </a>
+                  <a href="{{ url('/categoriaobras') }}" > OBRA     </a>
                   <a> |</a>
                   <a style="word-spacing: 3px;" href="{{ url('presupuesto') }}" > SOLICITUD DE PRESUPUESTO</a> 
                   <a> |</a>
-                  <a href="{{ url('fabrica') }}" > CLIENTES      </a>
+                  <a href="{{ url('/clientes') }}" > CLIENTES      </a>
             </div>
         </div>
           </div>

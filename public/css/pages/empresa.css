@@ -1,0 +1,46 @@
+img{
+          
+} 
+
+.empresa{ 
+	font-family: 'Source Sans Pro', sans-serif!important;
+	position: relative;
+	top: -20px;
+	height: 500px;
+}
+
+.empresa hr{
+	border: solid 1px #32398E;
+}
+
+.empresa div{
+	line-height: 26px;
+	padding :52px;
+	font-weight: lighter;
+}
+
+.empresa p{
+	margin-top:12px; 
+	margin-bottom:12px;
+}
+
+.empresa_slider_dif{
+	text-align: left; 
+	position: absolute;
+	top: 20%;
+	left: 70%;
+	font-size:50px!important; 
+	background-color: rgba(23, 27, 66, 0.9); 
+	width: 467px!important; 
+	height: 200px; 
+	line-height: 100%; 
+	font-family: 'Source Sans Pro', sans-serif!important;
+}
+
+.empresa_slider_dif span{
+	text-align: left; 
+	padding: 3%;
+	font-size: 50px; 
+	font-family: 'Source Sans Pro', sans-serif;
+}
+

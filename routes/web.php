@@ -26,6 +26,16 @@ Route::post('enviar-mail', [
     'as'   => 'enviarmail',
 ]);
 
+//CLIENTES
+Route::get('/clientes', 'PaginasController@clientes')->name('clientes');
+
+//CATEGORIA DE OBRAS
+Route::get('/categoriaobras', 'PaginasController@categoriaobras')->name('catobras');
+//OBRA
+Route::get('/obras/{obra_id}', 'PaginasController@obras')->name('obras');
+//GALERIA
+Route::get('/obragaleria/{obra_id}', 'PaginasController@galeria')->name('obragaleria');
+
 
 //ADMIN*************->middleware('admin')******************************************************************************************->middleware('auth')
 Route::prefix('adm')->group(function () {

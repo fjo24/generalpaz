@@ -1,0 +1,25 @@
+.slider-ff{
+	font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.slider .indicators .indicator-item{
+	position: relative;
+	background-color: blue;
+	bottom: 60px;
+	z-index: 7;
+}
+
+.contenedor-flex-center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.ext1carousel{
+  background: #F5F5F5;
+  margin-top: 50px;
+  border-top: 1px solid gray;
+
+}  

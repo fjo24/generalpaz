@@ -1,0 +1,128 @@
+.categorias {
+    margin-top: 50px;
+    margin-bottom: 83px;
+}
+.titulo-cat {
+    position: relative;
+    top: -4px;
+    font-size: 27px;
+    color: #FF0000;
+    font-family: 'Raleway';
+    margin-bottom: 30px;
+}
+.cat-line {
+    position: relative;
+    top: -4px;
+    width: 100px;
+    height: 2px!important;
+    background-color: red!important;
+    border: 0px red;
+}
+.items-cat {
+    margin-top: 38px;
+    margin-bottom: -24px;
+}
+.img-cat {
+    width: 374px;
+    height: 406px;
+}
+.div-nombre {
+    display: table;
+    background-color: rgba(51, 51, 51, 0.86);
+    height: 83px;
+    font-weight: 900;
+    font-family: 'Raleway';
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    position: relative;
+    width: 100%;
+    bottom: 83px;
+    color: white;
+}
+.texto {
+    display: table-cell;
+    vertical-align: middle;
+}
+.div-categoria {
+    display: table;
+    height: 429px;
+}
+/* DESTACADOS */
+
+.efecto {
+    position: absolute;
+    opacity: 0;
+    background-color: rgba(51, 51, 51, 0.75);
+    width: 356px;
+    height: 356px;
+    z-index: 999;
+    display: table-cell;
+    vertical-align: middle;
+        left: 5%;
+    top: 0%;
+}
+.efecto:hover {
+    opacity: 1;
+    transition: 1s;
+}
+.central {
+        padding: inherit;
+    border: 1px solid white;
+    border-radius: 0%;
+    display: inline-block;
+    position: absolute!important;
+    color: white!important;
+    width: 45px;
+    height: 45px;
+    top: 50%!important;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+.efecto i {
+    padding-top: 20%;
+    font-weight: bold;
+    font-size: 17px;
+    position: absolute;
+    left: 31%;
+    top: 10%;
+}
+.bloquecard {
+    padding-right: 5px!important;
+    padding-left: 5px!important;
+    height: 442px!important;
+}
+.titulo-catobra {
+    margin-top: 7px;
+    position: relative;
+    top: 3px;
+}
+
+.subtitulo {
+    margin-top: 7px;
+    position: relative;
+    top: 3px;
+}
+
+.bloquecont{
+        margin-top: -1%;
+}
+
+.div-nombrex{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px!important;
+    color: #A70000;
+    position: relative;
+    bottom: 18px;
+    left: 5%;
+}
+
+.modal {
+    width: 56%!important;
+}
+
+.modal_tareas p{
+    float: left !important;
+}

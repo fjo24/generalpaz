@@ -1,0 +1,123 @@
+.categorias {
+    margin-top: 50px;
+    margin-bottom: 83px;
+}
+.titulo-cat {
+    position: relative;
+    top: -4px;
+    font-size: 47px;
+    color: #A70000;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-bottom: 30px;
+}
+.cat-line {
+    position: relative;
+    top: -4px;
+    width: 100px;
+    height: 2px!important;
+    background-color: red!important;
+    border: 0px red;
+}
+.items-cat {
+    margin-top: 38px;
+    margin-bottom: -24px;
+}
+.img-cat {
+    width: 374px;
+    height: 406px;
+}
+.div-nombre{
+    display: table-cell!important;
+    height: 66px;
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    color: #A70000;
+    font-weight: bold;
+    justify-content: left;
+    align-items: center;
+    font-size: 19px;
+    position: absolute;
+    width: 100%;
+    padding-top: 0px;
+    bottom: -2px;
+
+}
+.texto {
+    display: table-cell;
+    vertical-align: middle;
+}
+.div-categoria {
+    display: table;
+    height: 429px;
+}
+/* DESTACADOS */
+
+.efecto {
+    position: absolute;
+    opacity: 0;
+    background-color: rgba(51, 51, 51, 0.75);
+    width: 356px;
+    height: 356px;
+    z-index: 999;
+    display: table-cell;
+    vertical-align: middle;
+}
+.efecto:hover {
+    opacity: 1;
+    transition: 1s;
+}
+.central {
+        padding: inherit;
+    border: 1px solid white;
+    border-radius: 0%;
+    display: inline-block;
+    position: absolute!important;
+    color: white!important;
+    width: 45px;
+    height: 45px;
+    top: 50%!important;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+.efecto i {
+    padding-top: 20%;
+    font-weight: bold;
+    font-size: 17px;
+    position: absolute;
+    left: 31%;
+    top: 10%;
+}
+.bloquecard {
+    padding-right: 5px!important;
+    padding-left: 5px!important;
+    height: 442px!important;
+}
+.titulo-catobra {
+    margin-top: 7px;
+    position: relative;
+    top: 12px;
+}
+
+.bloquecont{
+    margin-top: 6%;
+    margin-bottom: 19%!important;
+}
+
+@media only screen and (max-width: 600px){
+
+    .div-categoria{
+        margin-left: 0%!important;
+        display: table;
+        height: 400px;
+    }
+
+    .div-nombre {
+        bottom: 65px!important;
+    }
+
+    .bloquecard {
+        height: 357px!important;
+    }
+}
