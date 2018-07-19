@@ -16,8 +16,8 @@
 
 				<div class="row">
 					<div class="col s12 l12">
-						{!!Form::open(['route'=>'enviarcv', 'method'=>'POST'])!!}
-						{{ csrf_field() }}
+						<form action="{{route('enviarcv')}}" method="post" enctype="multipart/form-data">
+                  {{ csrf_field() }}
 					      	<div class="row">
 					      	
 					        	<div class="input-field col m6 s12" style="color: black">
@@ -51,17 +51,19 @@
 					      	</div>
 					      	<div class="row">
 				                  <div class="file-field col l6 m6 s12 push-l1">
-				                    <div class="left file-path-wrapper" style="    right: 115px;width: 60%;position: relative;left: -76px;">
-				                      <input class="file-path validate" type="text" file">
-				                    </div>
-				                    <div class="btn" style="background-color: white;height: 39px;width: 183px;color: #A70000;    border: 1px solid;font-family: 'Source Sans Pro', sans-serif;position: relative;
-    right: 55px;">
-				                      <input type="file" id="imagen" name="imagen">
-				                      <span>Examinar</span>
-				                    </div>
+				                    <div class="file-field input-field col s12">
+            <div class="btn" style="background-color: white;height: 39px;width: 183px;color: #A70000;    border: 1px solid;font-family: 'Source Sans Pro', sans-serif;position: relative;">
+                <span>Archivo</span>
+                {!! Form::file('archivo') !!}
+            </div>
+            <div class="file-path-wrapper" style="color: black">
+                {!! Form::text('archivo',null, ['class'=>'file-path']) !!}
+            </div>
+          </div>
+
 				                  </div>
 							    <div class="col s6">
-					        asdas
+					    
 					        	<br>
 							      	<button class="btn waves-effect waves-light z-depth-0" type="submit" name="action" style="background-color: white;height: 39px;width: 183px;color: #A70000;    border: 1px solid;font-family: 'Source Sans Pro', sans-serif;">Enviar
 									</button>

@@ -40,8 +40,8 @@ if(isset($_GET['mensaje'])){
 }
 ?>
 </div>
-
-{!!Form::open(['route'=>'enviarmail', 'method'=>'POST', 'files' => true])!!}
+<form action="{{route('enviarmail')}}" method="post" enctype="multipart/form-data">
+                  {{ csrf_field() }}
 <div class="container" style="margin-bottom: 100px;">
     <div class="row" style="margin-top: 100px;">
         <div id="estado1" >
@@ -86,14 +86,15 @@ if(isset($_GET['mensaje'])){
                 </div>
                 <div align="right">
                   <div class="file-field col l5 m6 s12 push-l1">
-                    <div class="btn" style="background: #A70000;">
-                      <span>Examinar</span>
-                      <input type="file" id="imagen" name="imagen">
-                    </div>
-                    <div class="file-path-wrapper">
-                      <input class="file-path validate" type="text" file">
-                    </div>
+                    <div class="btn" style="background-color: white;height: 39px;width: 183px;color: #A70000;    border: 1px solid;font-family: 'Source Sans Pro', sans-serif;position: relative;">
+                <span>Archivo</span>
+                {!! Form::file('archivo') !!}
+            </div>
+            <div class="file-path-wrapper" style="color: black">
+                {!! Form::text('archivo',null, ['class'=>'file-path']) !!}
+            </div>
                   </div>
+
                 </div>
                 <div class="input-field col l5 m6 s12 pull-l1 right">
                     <button type="button" id="botonEstadoAnterior" class="btn center z-depth-0" style="margin-top: 20px; background-color:white; border:1px solid #A70000; color:black;">Anterior</a>

@@ -31,7 +31,7 @@
                                                 </div>
 
                                         @foreach($obra->imagenes as $imagen)
-                                        <img alt="" class="responsive-img" src="{{asset($imagen->imagen)}}" style="width: 356px;height: 356px;">
+                                        <img alt="" class="responsive-img" src="{{asset($imagen->imagen)}}" style="width: 356px;">
                                             @if($ready == 0)    
                                         @break;
                                     @endif

@@ -28,9 +28,7 @@
         <li><strong>Mensaje:</strong> {{$mensaje}}</li>
         <br>
         <br>
-        @if($imagen != null)
-        <img src="{{($imagen)}}">
-        @endif
+
     </ul>
 </body>
 </html>

@@ -183,11 +183,25 @@ class PaginasController extends Controller
         $email    = $request->email;
         $documento = $request->documento;
         $domicilio  = $request->domicilio;
-       //     dd($producto);
-        Mail::send('pages.emails.trabajamail', ['nombre' => $nombre, 'apellido' => $apellido, 'telefono' => $telefono, 'email' => $email, 'documento' => $documento, 'domicilio' => $domicilio], function ($message){
+        $newid = 'cvs_';
+        if ($request->hasFile('archivo')) {
+            if ($request->file('archivo')->isValid()) {
+                $file = $request->file('archivo');
+                $path = public_path('img/archivos/');
+                $request->file('archivo')->move($path, $newid.'_'.$file->getClientOriginalName());
+                $archivo = 'img/archivos/' . $newid.'_'.$file->getClientOriginalName();
+                
+            }
+        }
+
+           // dd($request);
+        Mail::send('pages.emails.trabajamail', ['nombre' => $nombre, 'apellido' => $apellido, 'telefono' => $telefono, 'email' => $email, 'documento' => $documento, 'domicilio' => $domicilio], function ($message) use ($archivo){
 
             $dato = Dato::where('tipo', 'email')->first();
             $message->from('info@aberturastolosa.com.ar', 'Aberturas General Paz');
+
+            //Attach file
+            $message->attach($archivo);
 
             $message->to($dato->descripcion);
 

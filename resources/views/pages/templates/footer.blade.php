@@ -26,14 +26,19 @@
                             <img src="{{asset('img/layouts/logo4.png')}}">
                         </div>
                     </div>
-                    <div class="col l7 s12 m7" style="position: relative;top: 15px;">
+                    <div class="col l6 s12 m6" style="position: relative;top: 15px;">
                         <div class="logos center hide-on-small-only">
                             <img src="{{asset('img/layouts/logo5.png')}}">
                         </div>
                     </div>
-                    <div class="col l5 s12 m5">
+                    <div class="col l3 s12 m3">
                         <div class="logos center hide-on-small-only" style="position: relative;top: 3px;right: 43px;">
                             <img src="{{asset('img/layouts/logo6.png')}}">
+                        </div>
+                    </div>
+                    <div class="col l3 s12 m3">
+                        <div class="logos center hide-on-small-only" style="position: relative;top: 3px;right: 43px;">
+                            <img src="{{asset('img/layouts/logo7.png')}}">
                         </div>
                     </div>
                 </div>
