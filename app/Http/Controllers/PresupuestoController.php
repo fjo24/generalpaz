@@ -25,14 +25,14 @@ use App\Correo;
 class PresupuestoController extends Controller
 {
   public function index(){
-    $active='presupuesto';
+    $activo='presupuesto';
 
-    return view('pages.presupuesto', compact('active'));
+    return view('pages.presupuesto', compact('activo'));
   }
   
   public function enviarMail(Request $request) {
       $datos = Dato::where('tipo', 'email')->first();
-
+      $activo='presupuesto';
       $nombre = $request->input('nombre');
       $localidad = $request->input('localidad');
       $telefono = $request->input('telefono');
@@ -55,6 +55,6 @@ class PresupuestoController extends Controller
           $success = 'Correo enviado correctamente';
       }
 
-      return back()->with('success', $success);
+      return back()->with('success', $success)->with('activo', $activo);
     }
 }

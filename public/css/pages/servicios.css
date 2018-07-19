@@ -21,8 +21,13 @@
 	font-family: 'Source Sans Pro', sans-serif!important;
 	font-size: 17px;
 	color: #7F7F7F;
+
 }
 
 .formulario_servicios{
 	background-color: #FAFAFA;
+}
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+    border-bottom: 2px solid #A70000!important;
 }

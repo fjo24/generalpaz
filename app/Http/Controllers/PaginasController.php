@@ -36,11 +36,12 @@ class PaginasController extends Controller
 
     public function empresa()
     {
+        $activo    = 'empresa';
         $sliders   = Slider::orderBy('orden', 'ASC')->Where('seccion', 'empresa')->get();
         $contenido = Empresa::all()->first();
         $imagenes = Imgcertificacion::orderBy('id', 'ASC')->get();
         $certificacion = Certificacion::all()->first();
-        return view('pages.empresa', compact('sliders', 'contenido', 'imagenes', 'certificacion'));
+        return view('pages.empresa', compact('sliders', 'contenido', 'imagenes', 'certificacion', 'activo'));
     }
 
     public function servicios()
@@ -53,44 +54,49 @@ class PaginasController extends Controller
 
 
     public function categorias(){
+        $activo    = 'productos';
         $metadato= metadato::where('seccion','productos')->first();
         $categorias = Categoria::OrderBy('orden', 'asc')->get();
-        return view('pages.categorias', compact('categorias', 'metadato'));
+        return view('pages.categorias', compact('categorias', 'metadato', 'activo'));
     }
 
     public function productos($id)
     {
+        $activo    = 'productos';
         $categoria = Categoria::find($id);
         $ready = 0;
         $productos = Producto::OrderBy('orden', 'asc')->where('categoria_id', $id)->get();
         $categorias = Categoria::OrderBy('orden', 'asc')->get();
-        return view('pages.productos', compact('productos', 'categoria', 'ready', 'categorias', 'id'));
+        return view('pages.productos', compact('productos', 'categoria', 'ready', 'categorias', 'id', 'activo'));
     }
 
     public function productoinfo($id)
     {
+        $activo    = 'productos';
         $p = Producto::find($id);
         $idcat= $p->categoria_id;
         $categoria = Categoria::find($idcat);
         $ready = 0;
         $productos = Producto::OrderBy('orden', 'asc')->where('categoria_id', $id)->get();
         $categorias = Categoria::OrderBy('orden', 'asc')->get();
-        return view('pages.productoinfo', compact('productos', 'categoria', 'ready', 'categorias', 'p'));
+        return view('pages.productoinfo', compact('productos', 'categoria', 'ready', 'categorias', 'p', 'activo'));
     }
 
     public function categoriaobras()
     {
+        $activo    = 'obras';
         $obras = Categoria_obra::OrderBy('orden', 'asc')->get();
-        return view('pages.catobras', compact('obras'));
+        return view('pages.catobras', compact('obras', 'activo'));
     }
 
     public function obras($id)
-    {
+ {
+    $activo    = 'obras';
         $categoria = Categoria_obra::find($id);
         $ready     = 0;
         $servicios = Producto::OrderBy('orden', 'ASC')->get();
         $obras     = Obra::OrderBy('orden', 'ASC')->where('categoria_obra_id', $id)->get();
-        return view('pages.obras', compact('obras', 'ready', 'categoria', 'servicios'));
+        return view('pages.obras', compact('obras', 'ready', 'categoria', 'servicios', 'activo'));
     }
 
     public function contacto($producto)
@@ -101,7 +107,7 @@ class PaginasController extends Controller
         return view('pages.contacto', compact('activo', 'producto', 'contenido'));
     }
 
-    public function enviarmail(Request $request)
+    public function enviarmailcontacto(Request $request)
     {
         $activo   = 'contacto';
         $dato     = Dato::where('tipo', 'mail')->first();
@@ -135,40 +141,41 @@ class PaginasController extends Controller
     public function buscar(Request $request)
     {
 
-        $busqueda = $request->buscar;
+        $busqueda = $request->nombre;
 
         $busca = 1;
         $ready = 0;
         //$metadatos = Metadato::where('section','buscar')->get();
-        $activo    = 'productos';
+        $activo    = 'buscar';
         $productos = Producto::where('nombre', 'like', '%' . $busqueda . '%')->get();
-        $categoria = Categoria::find(1);
+        $categoria = null;
         $activo        = 'productos';
         $categorias    = Categoria::orderBy('orden', 'asc')->get();
 
         $todos         = Producto::where('nombre', 'like', '%' . $busqueda . '%')->get();
         $ready = 0;
 
-        return view('pages.productos', compact('categorias', 'subcategorias', 'productos', 'productos_directos', 'activo', 'todos', 'ready', 'categoria'));
+        return view('pages.busqueda', compact('categorias', 'subcategorias', 'productos', 'productos_directos', 'activo', 'todos', 'ready', 'categoria', 'activo'));
 
     }
 
     public function clientes()
     {
+        $activo    = 'clientes';
         $clientes = Cliente::orderBy('orden', 'ASC')->get();
-        return view('pages.clientes', compact('clientes'));
+        return view('pages.clientes', compact('clientes', 'activo'));
     }
 
     public function trabaja()
     {
         //return ($producto);
-        $activo = 'contacto';
+        $activo = 'trabaja';
         return view('pages.trabaja', compact('activo', 'contenido'));
     }
 
     public function enviarcv(Request $request)
     {
-        $activo   = 'contacto';
+        $activo   = 'trabaja';
         $dato     = Dato::where('tipo', 'mail')->first();
         $nombre   = $request->nombre;
         $apellido = $request->apellido;

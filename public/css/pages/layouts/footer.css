@@ -112,3 +112,8 @@ footer span{
 	font-weight: bold;
 	font-size: 16px;
 }
+
+.rightitems{
+	position: relative;
+    left: 5%;
+}

@@ -64,3 +64,21 @@
     border: 1px solid #A70000;
     background: #A70000;
 }
+
+@media only screen and (max-width: 500px){
+
+
+.certificaciones {
+    margin-top: 166%;
+}
+
+.slider {
+    position: relative;
+    height: 400px;
+    width: 72%!important;
+}
+
+.certificaciones .descripcion {
+    margin-bottom: 38%;
+}
+}

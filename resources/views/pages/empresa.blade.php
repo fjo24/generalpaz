@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="{{ asset('css/pages/certificaciones.css') }}">
 @endsection
 @section('contenido')
-   <div class="slider" >
+   <div class="slider hide-on-med-and-down" >
       <ul class="slides">
       @foreach($sliders as $slider)
          <li>

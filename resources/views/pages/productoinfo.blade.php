@@ -25,7 +25,7 @@
                         </div>
                         {{-- Menu final --}}
                         <div class="galeria2 col l9 m9 s12">
-                            <div class="col l12 m12 s12" style="padding: 0;    height: auto;    padding-left: 2%!important;">
+                            <div class="col l12 m12 s12" style="padding: 0;    height: auto;    padding-left: 2%!important;    margin-bottom: 6%;">
                                 <div class="col l6 m12 s12 galeriadeproducto">
                                     <div class="cont-ser">
                                         <div class="row imggrande">
@@ -69,9 +69,9 @@
         {!! $p->descripcion !!}
     </div>
     <a href="{{ url('/contacto', $p->nombre) }}">
-        <button class="pedido btn btn-default left" href="" style="background-color: #7D0045;">
+        <button class="pedido btn btn-default left" href="" style="background-color: white;height: 39px;width: 213px;color: #A70000;height: 39px;border: 1px solid;font-family: 'Source Sans Pro', sans-serif;">
             <span class="rpedido">
-                REALIZAR CONSULTA
+                SOLICITAR PRESUPUESTO
             </span>
         </button>
     </a>
@@ -114,6 +114,7 @@
                   </div>
             </div>
                 @endforeach   
+                
         </div>
     </div>
     <div id="vidrios" class="col s12">

@@ -67,12 +67,12 @@
         <div class="row" style="">
             <div class="contenido-mtto col l12">
                 <div class="titulo-mtto col l12 center">
-                <h1 class="naranja mayus fs36" style="color: #7F7F7F; font-size: 26px; font-family: 'Source Sans Pro', sans-serif;">¿Necesitás Asesoramiento? </h1>
-                <div style="margin-top: 20px; margin-bottom: 20px; color: #6F6F6F;background-color: #fafafa;">Contáctenos y le proporcionaremos la información que necesite</div>
+                <h1 class="naranja mayus fs36" style="color: #7F7F7F; font-size: 26px; font-family: 'Source Sans Pro', sans-serif;    font-weight: bold;margin-top: 10%;">¿Necesitás Asesoramiento? </h1>
+                <div style="font-family: 'Source Sans Pro', sans-serif;margin-top: 20px; margin-bottom: 20px;    font-size: 16px; color: #6F6F6F;background-color: #fafafa;">Contáctenos y le proporcionaremos la información que necesite</div>
 
                 <div class="row">
                     <div class="col s12 l12">
-                        {!!Form::open(['route'=>'enviarmail', 'method'=>'POST'])!!}
+                        {!!Form::open(['route'=>'enviarmailcontacto', 'method'=>'POST'])!!}
                         {{ csrf_field() }}
                             <div class="row">
                                 <div class="input-field col l12 m12 s12" style="color: black">

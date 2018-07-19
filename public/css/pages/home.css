@@ -158,3 +158,43 @@ footer .listlinks2 {
 
 
 }
+
+@media only screen and (max-width: 500px){
+
+.lineasdecontenido .contenido p {
+    /* position: relative; */
+    left: 4%!important;
+    color: #595959;
+    width: 300px;
+    bottom: 48px;
+
+}
+.lineasdecontenido .contenido{
+
+    width: 100%;
+    
+}
+.lineasdecontenido .titulo {
+    font-size: 27px!important;
+    line-height: 3px;
+    color: #A70000;
+    font-weight: 300;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.lineasdecontenido .descripcion {
+    font-size: 27px!important;
+    line-height: 0px;
+    font-weight: bold;
+    color: #A70000;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+}
+
+.lineasdecontenido .descripcion {
+    font-size: 47px;
+    line-height: 0px;
+    font-weight: bold;
+    color: #A70000;
+    font-family: 'Source Sans Pro', sans-serif;
+}

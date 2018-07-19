@@ -31,9 +31,9 @@ Route::get('/empresa', 'PaginasController@empresa')->name('empresa');
 
 //CONTACTO
 Route::get('/contacto/{producto}', 'PaginasController@contacto')->name('contacto');
-Route::post('enviar-mail', [
-    'uses' => 'PaginasController@enviarmail',
-    'as'   => 'enviarmail',
+Route::post('enviar-mailcontacto', [
+    'uses' => 'PaginasController@enviarmailcontacto',
+    'as'   => 'enviarmailcontacto',
 ]);
 
 //TRABAJA CON NOSOTROS

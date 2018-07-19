@@ -1,43 +1,43 @@
 <footer class="page-footer">
-    <div class="container" style="width: 100%">
+    <div class="container" style="width: 91%">
         <div class="row" style="display:  flex; align-items:  center;">
             <div class="col l12 s12 m12">
                 <div class="footer-a col l6 s12 m6">
-                    <div class="col l12 logo_footer center" style="    margin-top: 2%;">
+                    <div class="col l12 logo_footer center" style="margin-top: 2%;margin-bottom: 5%;">
                         <img src="{{asset('img/logo_footer.png')}}">
                     </div>
                     <div class="col l3 s12 m4">
-                        <div class="logos center">
+                        <div class="logos center hide-on-small-only">
                             <img src="{{asset('img/layouts/logo1.png')}}">
                         </div>
                     </div>
-                    <div class="col l3 s12 m4">
-                        <div class="logos center">
+                    <div class="col l3 s12 m4" style="top: 2px;right: -7px;">
+                        <div class="logos center hide-on-small-only">
                             <img src="{{asset('img/layouts/logo2.png')}}">
                         </div>
                     </div>
                     <div class="col l3 s12 m4">
-                        <div class="logos center">
+                        <div class="logos center hide-on-small-only">
                             <img src="{{asset('img/layouts/logo3.png')}}">
                         </div>
                     </div>
-                    <div class="col l3 s12 m4">
-                        <div class="logos center">
+                    <div class="col l3 s12 m4" style="position: relative;top: 7px;left: -20px;">
+                        <div class="logos center hide-on-small-only">
                             <img src="{{asset('img/layouts/logo4.png')}}">
                         </div>
                     </div>
-                    <div class="col l7 s12 m7">
-                        <div class="logos center">
+                    <div class="col l7 s12 m7" style="position: relative;top: 15px;">
+                        <div class="logos center hide-on-small-only">
                             <img src="{{asset('img/layouts/logo5.png')}}">
                         </div>
                     </div>
                     <div class="col l5 s12 m5">
-                        <div class="logos center">
+                        <div class="logos center hide-on-small-only" style="position: relative;top: 3px;right: 43px;">
                             <img src="{{asset('img/layouts/logo6.png')}}">
                         </div>
                     </div>
                 </div>
-                <div class="leftitems col l3 s6 m3">
+                <div class="leftitems col l3 s6 m3 hide-on-small-only" style="position: relative;top: 11px;">
                 <h5 class="titulo-footer">
                     SITEMAP
                 </h5>
@@ -45,23 +45,23 @@
                     <div class="listlinks col l6 m6">
                         <ul>
                             <li>
-                                <a class="grey-text text-lighten-3" href="#!">
+                                <a class="grey-text text-lighten-3" href="{{ url('/') }}">
                                     Home
                                 </a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3" href="#!">
-                                    Mantenimiento
+                                <a class="grey-text text-lighten-3" href="{{ url('empresa') }}">
+                                    Empresa
                                 </a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3" href="#!">
+                                <a class="grey-text text-lighten-3" href="{{ url('categorias') }}">
                                     Productos
                                 </a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3" href="#!">
-                                    Empresa
+                                <a class="grey-text text-lighten-3" href="{{ url('servicios') }}">
+                                    Servicios
                                 </a>
                             </li>
                         </ul>
@@ -69,22 +69,17 @@
                     <div class="listlinks col l6 m6">
                         <ul style="">
                             <li>
-                                <a class="grey-text text-lighten-3" href="#!">
-                                    Consejos de Seguridad
-                                </a>
-                            </li>
-                            <li>
-                                <a class="grey-text text-lighten-3" href="#!">
+                                <a class="grey-text text-lighten-3" href="{{ url('categoriaobras') }}">
                                     Obras
                                 </a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3" href="#!">
-                                    Clientes
+                                <a class="grey-text text-lighten-3" href="{{ url('presupuesto') }}">
+                                    Solicitar Presupuesto
                                 </a>
                             </li>
                             <li>
-                                <a class="grey-text text-lighten-3" href="#!">
+                                <a class="grey-text text-lighten-3" href="{{ url('contacto') }}">
                                     Contacto
                                 </a>
                             </li>
@@ -92,7 +87,8 @@
                     </div>
                 </div>
             </div>
-                <div class="rightitems col l3 s12 m3 hide-on-med-and-down left">
+                <div class="rightitems col l3 s12 m3 hide-on-med-and-down left" style="    position: relative;
+    left: 4%;top: 11px;">
                 <h5 class="titulo-footer">
                     EXCELSIOR S.A.
                 </h5>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>klklkl</title>
+	<title>Aberturas General Paz</title>
 </head>
 <body>
 	<p>{{ $mensaje }}</p>

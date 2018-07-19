@@ -283,3 +283,13 @@ border: none;
     font-family: 'Source Sans Pro', sans-serif!important;
 }
 
+.detalles{
+    font-size: 18px!important;
+    color: #595959;
+    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif!important;
+}
+
+.descripcionproducto p{
+    color: #595959!important;
+}

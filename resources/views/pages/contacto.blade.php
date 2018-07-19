@@ -19,7 +19,7 @@
 
 				<div class="row">
 					<div class="col s12 l12">
-						{!!Form::open(['route'=>'enviarmail', 'method'=>'POST'])!!}
+						{!!Form::open(['route'=>'enviarmailcontacto', 'method'=>'POST'])!!}
 						{{ csrf_field() }}
 					      	<div class="row">
 					      	{!!Form::hidden('producto',$producto,['class'=>''])!!}

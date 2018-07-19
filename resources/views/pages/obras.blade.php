@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                             <!-- Modal Structure -->
-  <div id="modal{!! $obra->id !!}" class="modal" style="height: 555px!important;max-height: 950px!important; ">
+  <div id="modal{!! $obra->id !!}" class="modal" style="height: 555px!important;max-height: 950px!important; " style="height: 558px!important;max-height: 571px!important;">
     <div class="modal-content">
         <h4 style="font-family: 'Source Sans Pro', sans-serif;font-size: 26px;color: #A70000;">{!! $obra->nombre !!}<a href="#!" class="right modal-close waves-effect waves-green btn-flat" style="font-family: 'Source Sans Pro', sans-serif;font-size: 14px;color: #777777;font-weight: bold;">Cerrar</a></h4>
         <div class="row">
@@ -80,10 +80,8 @@
                                                 @endforeach
                                             </div>
                                         </div>
-                                        <span class="left">
-                                            Tareas realizadas
-                                        </span>
-                                        <div class="left modal_tareas">
+                
+                                        <div class="left modal_tareas" style="float: left!important;">
                                                         {!!$obra->descripcion !!}
                                                     </div>
                                         </div>

@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <h2>Ladrilloslopez</h2>
+    <h2>Aberturas General Paz</h2>
     <h3>Solicitud de Presupuesto</h3> 
 
     <p>Enviado desde la web </p>
